@@ -1,4 +1,4 @@
-﻿$(document).ready(function () {
+﻿$(function () {
     /*Fancy box */
 
     $(".various").fancybox({
@@ -123,7 +123,7 @@
     });
 
     /*Video*/
-    $("#video").change(function (event) {
+    $("#video").on("change", function (event) {
         var id = $(this).val();
         $.ajax({
             url: "ajax/video.php",
@@ -395,7 +395,7 @@ $(function () {
 })(jQuery);
 
 /* fb */
-(function (d, s, id) {
+/*(function (d, s, id) {
     var js,
         fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -403,7 +403,7 @@ $(function () {
     js.id = id;
     js.src = "../connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
     fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
+})(document, "script", "facebook-jssdk");*/
 
 
 ; (function (context, $) {

@@ -62,6 +62,8 @@
 
 #menu {
   background-color: var(--main-color);
+  display: flex;
+  justify-content:center;
 }
 #menu .menu-center ul li ul {
   background-color: white;

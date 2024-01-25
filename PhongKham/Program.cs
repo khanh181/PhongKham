@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.StaticFiles;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +17,17 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// Configure static files and MIME types
+var provider = new FileExtensionContentTypeProvider();
+if (!provider.Mappings.ContainsKey(".woff"))
+{
+    provider.Mappings[".woff"] = "font/woff"; // Add or update the MIME type for .woff
+}
+app.UseStaticFiles(new StaticFileOptions
+{
+    ContentTypeProvider = provider
+});
 
 app.UseRouting();
 
