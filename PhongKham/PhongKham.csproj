@@ -6,4 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\fontawesome\**" />
+    <Content Remove="wwwroot\lib\fontawesome\**" />
+    <EmbeddedResource Remove="wwwroot\lib\fontawesome\**" />
+    <None Remove="wwwroot\lib\fontawesome\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+  </ItemGroup>
+
 </Project>

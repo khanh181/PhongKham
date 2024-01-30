@@ -1,132 +1,132 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-@font-face {
-    font-family: womens_icons;
-    src: url(../css/fonts/womens_icons.eot);
-    font-weight: 400;
-    font-style: normal 
-}
-@font-face {
-    font-family: womens_icons;
-    src: url(../css/fonts/womens_icons.svg#womens_icons) format("svg"), url(../css/fonts/womens_iconsd41d.eot?#iefix) format("embedded-opentype"), url(../css/fonts/womens_icons.woff) format("woff"), url(../css/fonts/womens_icons.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal
-}
+/*@font-face{
+	font-family:womens_icons;src:url(../fonts/womens_icons.eot);font-weight:400;font-style:normal
+		}
+@font-face{
+	font-family:womens_icons;
+	src:url(../fonts/womens_icons.svg#womens_icons) format("svg"),
+		url(../fonts/womens_iconsd41d.eot?#iefix) format("embedded-opentype"),
+		url(../fonts/womens_icons.woff) format("woff"),
+		url(../fonts/womens_icons.ttf) format("truetype");
+	font-weight:400;
+	font-style:normal
+		}*/
 /*-----------css reset---------------------*/
 *{ margin:0; padding:0;}
 html,body,div,span{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 /* Font face*/
-@font-face {
+/*@font-face {
     font-family: RCB;
-    src: url('../css/fonts/RobotoCondensedBold.eot');
-    src: url('../css/fonts/RobotoCondensedBold.eot') format('embedded-opentype'),
-         url('../css/fonts/RobotoCondensedBold.woff2') format('woff2'),
-         url('../css/fonts/RobotoCondensedBold.woff') format('woff'),
-         url('../css/fonts/RobotoCondensedBold.ttf') format('truetype'),
-         url('../css/fonts/RobotoCondensedBold.svg#RobotoCondensedBold') format('svg');
+    src: url('fonts/RobotoCondensedBold.eot');
+    src: url('fonts/RobotoCondensedBold.eot') format('embedded-opentype'),
+         url('fonts/RobotoCondensedBold.woff2') format('woff2'),
+         url('fonts/RobotoCondensedBold.woff') format('woff'),
+         url('fonts/RobotoCondensedBold.ttf') format('truetype'),
+         url('fonts/RobotoCondensedBold.svg#RobotoCondensedBold') format('svg');
 }
 
 @font-face {
     font-family: RCR;
-    src: url('../css/fonts/RobotoCondensedRegular.eot');
-    src: url('../css/fonts/RobotoCondensedRegular.eot') format('embedded-opentype'),
-         url('../css/fonts/RobotoCondensedRegular.woff2') format('woff2'),
-         url('../css/fonts/RobotoCondensedRegular.woff') format('woff'),
-         url('../css/fonts/RobotoCondensedRegular.ttf') format('truetype'),
-         url('../css/fonts/RobotoCondensedRegular.svg#RobotoCondensedRegular') format('svg');
+    src: url('fonts/RobotoCondensedRegular.eot');
+    src: url('fonts/RobotoCondensedRegular.eot') format('embedded-opentype'),
+         url('fonts/RobotoCondensedRegular.woff2') format('woff2'),
+         url('fonts/RobotoCondensedRegular.woff') format('woff'),
+         url('fonts/RobotoCondensedRegular.ttf') format('truetype'),
+         url('fonts/RobotoCondensedRegular.svg#RobotoCondensedRegular') format('svg');
 }
 
 @font-face {
     font-family: RM;
-    src: url('../css/fonts/RobotoMedium.eot');
-    src: url('../css/fonts/RobotoMedium.eot') format('embedded-opentype'),
-         url('../css/fonts/RobotoMedium.woff2') format('woff2'),
-         url('../css/fonts/RobotoMedium.woff') format('woff'),
-         url('../css/fonts/RobotoMedium.ttf') format('truetype'),
-         url('../css/fonts/RobotoMedium.svg#RobotoMedium') format('svg');
+    src: url('fonts/RobotoMedium.eot');
+    src: url('fonts/RobotoMedium.eot') format('embedded-opentype'),
+         url('fonts/RobotoMedium.woff2') format('woff2'),
+         url('fonts/RobotoMedium.woff') format('woff'),
+         url('fonts/RobotoMedium.ttf') format('truetype'),
+         url('fonts/RobotoMedium.svg#RobotoMedium') format('svg');
 }
 
 @font-face {
     font-family: RR;
-    src: url('../css/fonts/RobotoRegular.eot');
-    src: url('../css/fonts/RobotoRegular.eot') format('embedded-opentype'),
-         url('../css/fonts/RobotoRegular.woff2') format('woff2'),
-         url('../css/fonts/RobotoRegular.woff') format('woff'),
-         url('../css/fonts/RobotoRegular.ttf') format('truetype'),
-         url('../css/fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+    src: url('fonts/RobotoRegular.eot');
+    src: url('fonts/RobotoRegular.eot') format('embedded-opentype'),
+         url('fonts/RobotoRegular.woff2') format('woff2'),
+         url('fonts/RobotoRegular.woff') format('woff'),
+         url('fonts/RobotoRegular.ttf') format('truetype'),
+         url('fonts/RobotoRegular.svg#RobotoRegular') format('svg');
 }
 
 @font-face {
     font-family: RB;
-    src: url('../css/fonts/RobotoBold.eot');
-    src: url('../css/fonts/RobotoBold.eot') format('embedded-opentype'),
-         url('../css/fonts/RobotoBold.woff2') format('woff2'),
-         url('../css/fonts/RobotoBold.woff') format('woff'),
-         url('../css/fonts/RobotoBold.ttf') format('truetype'),
-         url('../css/fonts/RobotoBold.svg#RobotoBold') format('svg');
+    src: url('fonts/RobotoBold.eot');
+    src: url('fonts/RobotoBold.eot') format('embedded-opentype'),
+         url('fonts/RobotoBold.woff2') format('woff2'),
+         url('fonts/RobotoBold.woff') format('woff'),
+         url('fonts/RobotoBold.ttf') format('truetype'),
+         url('fonts/RobotoBold.svg#RobotoBold') format('svg');
 }
 
 @font-face {
     font-family: RL;
-    src: url('../css/fonts/RobotoLight.eot');
-    src: url('../css/fonts/RobotoLight.eot') format('embedded-opentype'),
-         url('../css/fonts/RobotoLight.woff2') format('woff2'),
-         url('../css/fonts/RobotoLight.woff') format('woff'),
-         url('../css/fonts/RobotoLight.ttf') format('truetype'),
-         url('../css/fonts/RobotoLight.svg#RobotoLight') format('svg');
+    src: url('fonts/RobotoLight.eot');
+    src: url('fonts/RobotoLight.eot') format('embedded-opentype'),
+         url('fonts/RobotoLight.woff2') format('woff2'),
+         url('fonts/RobotoLight.woff') format('woff'),
+         url('fonts/RobotoLight.ttf') format('truetype'),
+         url('fonts/RobotoLight.svg#RobotoLight') format('svg');
 }
 
 @font-face {
     font-family: SFBC;
-    src: url('../css/fonts/SFUEurostileBoldCondensed.eot');
-    src: url('../css/fonts/SFUEurostileBoldCondensed.eot') format('embedded-opentype'),
-         url('../css/fonts/SFUEurostileBoldCondensed.woff2') format('woff2'),
-         url('../css/fonts/SFUEurostileBoldCondensed.woff') format('woff'),
-         url('../css/fonts/SFUEurostileBoldCondensed.ttf') format('truetype'),
-         url('../css/fonts/SFUEurostileBoldCondensed.svg#SFUEurostileBoldCondensed') format('svg');
+    src: url('fonts/SFUEurostileBoldCondensed.eot');
+    src: url('fonts/SFUEurostileBoldCondensed.eot') format('embedded-opentype'),
+         url('fonts/SFUEurostileBoldCondensed.woff2') format('woff2'),
+         url('fonts/SFUEurostileBoldCondensed.woff') format('woff'),
+         url('fonts/SFUEurostileBoldCondensed.ttf') format('truetype'),
+         url('fonts/SFUEurostileBoldCondensed.svg#SFUEurostileBoldCondensed') format('svg');
 }
 
 @font-face {
     font-family: SFEC;
-    src: url('../css/fonts/SFUEurostileCondensed.eot');
-    src: url('../css/fonts/SFUEurostileCondensed.eot') format('embedded-opentype'),
-         url('../css/fonts/SFUEurostileCondensed.woff2') format('woff2'),
-         url('../css/fonts/SFUEurostileCondensed.woff') format('woff'),
-         url('../css/fonts/SFUEurostileCondensed.ttf') format('truetype'),
-         url('../css/fonts/SFUEurostileCondensed.svg#SFUEurostileCondensed') format('svg');
+    src: url('fonts/SFUEurostileCondensed.eot');
+    src: url('fonts/SFUEurostileCondensed.eot') format('embedded-opentype'),
+         url('fonts/SFUEurostileCondensed.woff2') format('woff2'),
+         url('fonts/SFUEurostileCondensed.woff') format('woff'),
+         url('fonts/SFUEurostileCondensed.ttf') format('truetype'),
+         url('fonts/SFUEurostileCondensed.svg#SFUEurostileCondensed') format('svg');
 }
 
 @font-face {
     font-family: UAS;
-    src: url('../css/fonts/UTMAmericanSans.eot');
-    src: url('../css/fonts/UTMAmericanSans.eot') format('embedded-opentype'),
-         url('../css/fonts/UTMAmericanSans.woff2') format('woff2'),
-         url('../css/fonts/UTMAmericanSans.woff') format('woff'),
-         url('../css/fonts/UTMAmericanSans.ttf') format('truetype'),
-         url('../css/fonts/UTMAmericanSans.svg#UTMAmericanSans') format('svg');
+    src: url('fonts/UTMAmericanSans.eot');
+    src: url('fonts/UTMAmericanSans.eot') format('embedded-opentype'),
+         url('fonts/UTMAmericanSans.woff2') format('woff2'),
+         url('fonts/UTMAmericanSans.woff') format('woff'),
+         url('fonts/UTMAmericanSans.ttf') format('truetype'),
+         url('fonts/UTMAmericanSans.svg#UTMAmericanSans') format('svg');
 }
 
 @font-face {
     font-family: UVTHB;
-    src: url('../css/fonts/UVNHepBold.eot');
-    src: url('../css/fonts/UVNHepBold.eot') format('embedded-opentype'),
-         url('../css/fonts/UVNHepBold.woff2') format('woff2'),
-         url('../css/fonts/UVNHepBold.woff') format('woff'),
-         url('../css/fonts/UVNHepBold.ttf') format('truetype'),
+    src: url('fonts/UVNHepBold.eot');
+    src: url('fonts/UVNHepBold.eot') format('embedded-opentype'),
+         url('fonts/UVNHepBold.woff2') format('woff2'),
+         url('fonts/UVNHepBold.woff') format('woff'),
+         url('fonts/UVNHepBold.ttf') format('truetype'),
          url('fotns/UVNHepBold.svg#UVNHepBold') format('svg');
 }
 
 @font-face {
     font-family: 'SFUFuturaBook';
-    src: url('../css/fonts/SFUFuturaBook.eot');
-    src: url('../css/fonts/SFUFuturaBook.eot') format('embedded-opentype'),
-         url('../css/fonts/SFUFuturaBook.woff2.tmp') format('woff2'),
-         url('../css/fonts/SFUFuturaBook.woff') format('woff'),
-         url('../css/fonts/SFUFuturaBook.ttf') format('truetype'),
-         url('../css/fonts/SFUFuturaBook.svg#SFUFuturaBook') format('svg');
+    src: url('fonts/SFUFuturaBook.eot');
+    src: url('fonts/SFUFuturaBook.eot') format('embedded-opentype'),
+         url('fonts/SFUFuturaBook.woff2') format('woff2'),
+         url('fonts/SFUFuturaBook.woff') format('woff'),
+         url('fonts/SFUFuturaBook.ttf') format('truetype'),
+         url('fonts/SFUFuturaBook.svg#SFUFuturaBook') format('svg');
 }
-
+*/
 /*----------basic----------------*/
 html,body {font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 25px; text-rendering: optimizeLegibility;}
 a { text-decoration:none; color:#f19737; transition:all 0.5s; -webkit-transition:all 0.5s; -moz-transition:all 0.5s;}
@@ -173,6 +173,7 @@ body{background: #FFF;}
 .input{ box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; border: 1px solid #e1e1e1; border-radius: 3px;}
 .center{ max-width:100%; margin:0 auto; position:relative;background: #ffffff;}
 .menu-center{ max-width:1188px; margin:0 auto; position:relative;}
+.menu-center ul{ display: flex; justify-content: center;}
 .w-clear:after{ display:block; content:""; clear:both;}
 .red{ color:#F00;}
 .rb{ color:#F00; font-weight: bold; font-size: 18px;}
@@ -264,24 +265,8 @@ body{background: #FFF;}
     }
 #menu.fix{position: fixed; top: 0; left: 0; width: 100%; min-width: 1200px; z-index: 999;}
 .menu-line{position: relative;}
-    .menu-line:after {
-        position: absolute;
-        content: '';
-        right: 0;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        background: url(../assets/icon/line-menu.png) no-repeat left center;
-    }
-    .menu-line:first-child:before {
-        position: absolute;
-        content: '';
-        left: 0;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        background: url(../assets/icon/line-menu.png) no-repeat left center;
-    }
+.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
+.menu-line:first-child:before{position: absolute; content: ''; left: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
 
 /* Slide */
 .home-slider5 .info {
