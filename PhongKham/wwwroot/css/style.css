@@ -265,8 +265,8 @@ body{background: #FFF;}
     }
 #menu.fix{position: fixed; top: 0; left: 0; width: 100%; min-width: 1200px; z-index: 999;}
 .menu-line{position: relative;}
-.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
-.menu-line:first-child:before{position: absolute; content: ''; left: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
+.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../assets/icon/line-menu.png) no-repeat left center;}
+.menu-line:first-child:before{position: absolute; content: ''; left: 0; top: 0; width: 1px; height: 100%; background: url(../assets/icon/line-menu.png) no-repeat left center;}
 
 /* Slide */
 .home-slider5 .info {
