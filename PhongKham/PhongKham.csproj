@@ -19,6 +19,35 @@
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <None Include="wwwroot\css\fonts\glyphicons-halflings-regular.svg.tmp" />
+    <None Include="wwwroot\css\fonts\glyphicons-halflings-regular.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoBold.svg.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoBold.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoCondensedBold.svg.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoCondensedBold.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoCondensedRegular.svg.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoCondensedRegular.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoLight.svg.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoLight.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoMedium.svg.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoMedium.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoRegular.svg.tmp" />
+    <None Include="wwwroot\css\fonts\RobotoRegular.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\SFUEurostileBoldCondensed.svg.tmp" />
+    <None Include="wwwroot\css\fonts\SFUEurostileBoldCondensed.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\SFUEurostileCondensed.svg.tmp" />
+    <None Include="wwwroot\css\fonts\SFUEurostileCondensed.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\SFUFuturaBook.svg.tmp" />
+    <None Include="wwwroot\css\fonts\SFUFuturaBook.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\slick.svg.tmp" />
+    <None Include="wwwroot\css\fonts\UTMAmericanSans.svg.tmp" />
+    <None Include="wwwroot\css\fonts\UTMAmericanSans.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\UVNHepBold.woff2.tmp" />
+    <None Include="wwwroot\css\fonts\womens_icons.svg.tmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
   </ItemGroup>
 
 </Project>

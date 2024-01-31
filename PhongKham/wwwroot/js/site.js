@@ -364,7 +364,7 @@ $(".ajax_like").click(function (event) {
 	});
 });
 
-; (function (context, $) {
+;/* (function (context, $) {
 	"use strict";
 	APP = context.APP = {
 		matchHeight: {
@@ -374,7 +374,7 @@ $(".ajax_like").click(function (event) {
 			}
 		}
 	};
-});
+});*/
 // Toggle Search
 // ------------------------------------------------------------------------------ //
 $("#menu").each(function () {

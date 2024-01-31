@@ -1,0 +1,61 @@
+[
+    //css
+  {
+    "outputFileName": "wwwroot/css/lib.min.css",
+    "inputFiles": [
+      "wwwroot/css/lib/bootstrap.min.css",
+      "wwwroot/css/lib/fontawesome-all.min.css",
+      "wwwroot/css/lib/jRating.jquery.css",
+      "wwwroot/css/lib/sm-blue.css",
+      "wwwroot/css/lib/sm-core-css.css",
+      "wwwroot/css/lib/splide.min.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/css/site.min.css",
+    "inputFiles": [
+      "wwwroot/css/main.css",
+      "wwwroot/css/style.css",
+      "wwwroot/css/newstyle.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+    // js
+  {
+    "outputFileName": "wwwroot/js/lib.min.js",
+    "inputFiles": [
+      "wwwroot/js/lib/jquery-3.5.1.min.js",
+      "wwwroot/js/lib/jquery-ui.min.js",
+      "wwwroot/js/lib/bootstrap.min.js",
+      "wwwroot/js/lib/fontawesome-all.min.js",
+      "wwwroot/js/lib/jquery.smartmenus.js",
+      "wwwroot/js/lib/jRating.jquery.js",
+      "wwwroot/js/lib/splide.min.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/site.min.js",
+    "inputFiles": [
+      "wwwroot/js/site.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  }
+  ]
