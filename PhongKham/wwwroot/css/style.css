@@ -1,23 +1,23 @@
 @charset "UTF-8";
-/*@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);*/
 @font-face{
-	font-family:womens_icons;src:url(../fonts/womens_icons.eot);font-weight:400;font-style:normal
+	font-family:womens_icons;src:url(../css/fonts/womens_icons.eot);font-weight:400;font-style:normal
 		}
 @font-face{
 	font-family:womens_icons;
-	src:url(../fonts/womens_icons.svg#womens_icons) format("svg"),
-		url(../fonts/womens_iconsd41d.eot?#iefix) format("embedded-opentype"),
-		url(../fonts/womens_icons.woff) format("woff"),
-		url(../fonts/womens_icons.ttf) format("truetype");
+	src:url(../css/fonts/womens_icons.html#womens_icons) format("svg"),
+		url(../css/fonts/womens_iconsd41d.eot?#iefix) format("embedded-opentype"),
+		url(../css/fonts/womens_icons.woff) format("woff"),
+		url(../css/fonts/womens_icons.ttf) format("truetype");
 	font-weight:400;
 	font-style:normal
-		}*/
+		}
 /*-----------css reset---------------------*/
 *{ margin:0; padding:0;}
 html,body,div,span{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 /* Font face*/
-/*@font-face {
+@font-face {
     font-family: RCB;
     src: url('fonts/RobotoCondensedBold.eot');
     src: url('fonts/RobotoCondensedBold.eot') format('embedded-opentype'),
@@ -125,7 +125,7 @@ html,body,div,span{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical
          url('fonts/SFUFuturaBook.woff') format('woff'),
          url('fonts/SFUFuturaBook.ttf') format('truetype'),
          url('fonts/SFUFuturaBook.svg#SFUFuturaBook') format('svg');
-}*/
+}
 
 /*----------basic----------------*/
 html,body {font-family:Arial, Helvetica, sans-serif; font-size: 14px; line-height: 25px; text-rendering: optimizeLegibility;}
@@ -265,8 +265,8 @@ body{background: #FFF;}
     }
 #menu.fix{position: fixed; top: 0; left: 0; width: 100%; min-width: 1200px; z-index: 999;}
 .menu-line{position: relative;}
-.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../assets/icon/line-menu.png) no-repeat left center;}
-.menu-line:first-child:before{position: absolute; content: ''; left: 0; top: 0; width: 1px; height: 100%; background: url(../assets/icon/line-menu.png) no-repeat left center;}
+.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
+.menu-line:first-child:before{position: absolute; content: ''; left: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
 
 /* Slide */
 .home-slider5 .info {
@@ -1167,16 +1167,16 @@ ul.hero-banner-btns a span {
     position: absolute;
     right: 0;
 }
-.m_hero .content.is_wysiwyg ul li a:after, .m_pagination_numbered .last_page .after, .m_pagination_numbered .last_page:after, .m_result_path li .after, .m_result_path li:after {
-    font-family: womens_icons;
-    content: "»";
-    speak: none;
-    font-style: normal;
-    font-weight: 400;
-    font-variant: normal;
-    text-transform: none;
-    -webkit-font-smoothing: antialiased;
-}
+    .m_hero .content.is_wysiwyg ul li a:after, .m_pagination_numbered .last_page .after, .m_pagination_numbered .last_page:after, .m_result_path li .after, .m_result_path li:after {
+        font-family: womens_icons;
+        content: "";
+        speak: none;
+        font-style: normal;
+        font-weight: 400;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+    }
 .m_search_bar button:before {
     font-family: womens_icons;
     content: "";

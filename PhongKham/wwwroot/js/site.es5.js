@@ -1,4 +1,6 @@
-﻿$(document).ready(function () {
+﻿"use strict";
+
+$(document).ready(function () {
 	/*new js*/
 	$("#smenu svg").click(function () {
 		$("#menus").slideToggle();
@@ -22,15 +24,15 @@
 		pagination: false,
 		breakpoints: {
 			950: {
-				perPage: 1.5,
-			},
+				perPage: 1.5
+			}
 		},
 		classes: {
 			arrows: "splide__arrows slide-arrows",
 			arrow: "splide__arrow slide-arrow",
 			prev: "splide__arrow--prev slide-prev",
-			next: "splide__arrow--next slide-next",
-		},
+			next: "splide__arrow--next slide-next"
+		}
 	}).mount();
 	new Splide("#news-carousel", {
 		start: 0,
@@ -44,9 +46,9 @@
 		pagination: false,
 		breakpoints: {
 			950: {
-				perPage: 1.5,
-			},
-		},
+				perPage: 1.5
+			}
+		}
 	}).mount();
 	new Splide("#newstype-carousel", {
 		arrows: false,
@@ -55,14 +57,14 @@
 		gap: "12px",
 		breakpoints: {
 			500: {
-				perPage: 3,
-			},
-		},
+				perPage: 3
+			}
+		}
 	}).mount();
 
 	/*index */
 	var s1 = document.createElement("script"),
-		s0 = document.getElementsByTagName("script")[0];
+	    s0 = document.getElementsByTagName("script")[0];
 	s1.async = true;
 	s1.src = "https://embed.tawk.to/5ebcf757967ae56c5219ab49/1go9gfr3j";
 	s1.charset = "UTF-8";
@@ -81,20 +83,18 @@
 		adaptiveHeight: !0,
 		pauseOnFocus: !0,
 		pauseOnHover: !0,
-		arrows: !0,
+		arrows: !0
 	});
 
 	$("#main-menu").smartmenus({
 		subMenusSubOffsetX: 1,
-		subMenusSubOffsetY: -8,
+		subMenusSubOffsetY: -8
 	});
 
 	$("#main-menus").smartmenus({
 		subMenusSubOffsetX: 1,
-		subMenusSubOffsetY: -8,
+		subMenusSubOffsetY: -8
 	});
-
-
 });
 
 /*my js*/
@@ -108,17 +108,16 @@ $('.hienthi').click(function (event) {
 		type: 'POST',
 		dataType: 'html',
 		data: { id: id, com: com, list: list },
-		success: function (res) {
+		success: function success(res) {
 			if (res == 1) {
 				$this.removeClass('fa-square-o');
 				$this.addClass('fa-check-square-o');
-			}
-			else {
+			} else {
 				$this.addClass('fa-square-o');
 				$this.removeClass('fa-check-square-o');
 			}
 		}
-	})
+	});
 });
 
 $('.tinhtrang').click(function (event) {
@@ -131,10 +130,10 @@ $('.tinhtrang').click(function (event) {
 		type: 'POST',
 		dataType: 'html',
 		data: { id: id, com: com, list: list },
-		success: function (res) {
+		success: function success(res) {
 			$this.html(res);
 		}
-	})
+	});
 });
 
 $('.noibat').click(function (event) {
@@ -148,17 +147,16 @@ $('.noibat').click(function (event) {
 		type: 'POST',
 		dataType: 'html',
 		data: { id: id, com: com, list: list, col: col },
-		success: function (res) {
+		success: function success(res) {
 			if (res == 1) {
 				$this.removeClass('fa-star-o');
 				$this.addClass('fa-star');
-			}
-			else {
+			} else {
 				$this.addClass('fa-star-o');
 				$this.removeClass('fa-star');
 			}
 		}
-	})
+	});
 });
 
 $('.login').click(function (event) {
@@ -172,23 +170,22 @@ $('.login').click(function (event) {
 		type: 'POST',
 		dataType: 'html',
 		data: { id: id, com: com, list: list, col: col },
-		success: function (res) {
+		success: function success(res) {
 			if (res == 1) {
 				$this.removeClass('fa-star-o');
 				$this.addClass('fa-star');
-			}
-			else {
+			} else {
 				$this.addClass('fa-star-o');
 				$this.removeClass('fa-star');
 			}
 		}
-	})
+	});
 });
 
 $('.change_stt').dblclick(function () {
 	$(this).children().removeAttr('disabled');
 	$(this).children().focus();
-})
+});
 
 $('.change_stt').focusout(function () {
 	var id = $(this).children().attr('data-id');
@@ -200,13 +197,13 @@ $('.change_stt').focusout(function () {
 		type: 'POST',
 		url: 'ajax/stt.php',
 		data: { id: id, com: com, stt: stt, list: list },
-		success: function () {
+		success: function success() {
 			$this.val(stt);
 		}
 
-	})
+	});
 	$(this).children().attr("disabled", "disabled");
-})
+});
 
 $('.change_stt').keypress(function (evt) {
 	if (evt.keyCode == 13 || evt.which == 13) {
@@ -219,33 +216,24 @@ $('.change_stt').keypress(function (evt) {
 			type: 'POST',
 			url: 'ajax/stt.php',
 			data: { id: id, com: com, stt: stt, list: list },
-			success: function () {
+			success: function success() {
 				$this.val(stt);
 			}
 
-		})
+		});
 		$(this).children().attr("disabled", "disabled");
 	}
-})
+});
 
-	// Menu mobile
-
+// Menu mobile
 
 $(".box-tab-tit div").click(function (event) {
 	if (!$(this).hasClass("active")) {
-		$(this)
-			.parent(".box-tab-tit")
-			.children("div")
-			.not($(this))
-			.removeClass("active");
+		$(this).parent(".box-tab-tit").children("div").not($(this)).removeClass("active");
 		$(this).addClass("active");
 		var i = parseInt($(this).index()) + 1;
 		$(this).parent(".box-tab-tit").next().find(".box-tab-con").hide();
-		$(this)
-			.parent(".box-tab-tit")
-			.next()
-			.find(".box-tab-con:nth-child(" + i + ")")
-			.show();
+		$(this).parent(".box-tab-tit").next().find(".box-tab-con:nth-child(" + i + ")").show();
 	}
 });
 
@@ -267,11 +255,11 @@ $(".tbl-giohang").on("change", ".ajax_soluong", function (event) {
 		type: "POST",
 		dataType: "json",
 		data: { id: id, sl: sl },
-		success: function (res) {
+		success: function success(res) {
 			$this.parent().next().html(res.thanhtien);
 			$(".giohang-thanhtien span").html(res.tongtien);
 			$gia.html(res.gia);
-		},
+		}
 	});
 });
 
@@ -285,12 +273,12 @@ $(".tbl-giohang").on("click", ".del-cart", function (event) {
 		type: "POST",
 		dataType: "json",
 		data: { id: id, pid: pid },
-		success: function (res) {
+		success: function success(res) {
 			$(".giohang-thanhtien span").html(res.thanhtien);
 			$(".giohang-tit span,.banner-ab-gh span").html(res.soluong);
 			$(".p" + pid).html(res.gia);
 			$this.parents(".tr").remove();
-		},
+		}
 	});
 	return false;
 });
@@ -304,20 +292,16 @@ $(".ajax_cart").click(function (event) {
 		type: "POST",
 		dataType: "json",
 		data: { id: id, sl: sl },
-		beforeSend: function () {
-			$(".ajax_cart").html(
-				'<img src="img/load.gif" width="25"/> Vui lòng đợi'
-			);
+		beforeSend: function beforeSend() {
+			$(".ajax_cart").html('<img src="img/load.gif" width="25"/> Vui lòng đợi');
 		},
-		success: function (res) {
-			$(".ajax_cart").html(
-				'<i class="fa fa-shopping-cart" aria-hidden="true"></i> Cho vào giỏ hàng'
-			);
+		success: function success(res) {
+			$(".ajax_cart").html('<i class="fa fa-shopping-cart" aria-hidden="true"></i> Cho vào giỏ hàng');
 			$(".banner-ab-gh span,.giohang-tit span").html(res.soluong);
 			$(".giohang-thanhtien span").html(res.tongtien);
 			$(".tbl-giohang").html(res.giohang);
 			$("#giohang").addClass("active");
-		},
+		}
 	});
 });
 
@@ -332,11 +316,11 @@ $(".ajax_cart_for").click(function (event) {
 				type: "POST",
 				dataType: "json",
 				data: { id: id, size: size, soluong: soluong },
-				success: function (res) {
+				success: function success(res) {
 					$(".banner-cart .text").html(res.soluong + " (sp)");
 					$(".giohang-thanhtien span").html(res.tongtien);
 					$(".tbl-giohang").html(res.giohang);
-				},
+				}
 			});
 		}
 	});
@@ -355,27 +339,27 @@ $(".ajax_like").click(function (event) {
 		type: "POST",
 		dataType: "html",
 		data: { id: id },
-		success: function (res) {
+		success: function success(res) {
 			if (res == 0) {
 				alert("Bạn đã thích sản phẩm này rồi!");
 			} else {
 				$this.children("span").html(res);
 			}
-		},
+		}
 	});
 });
 
-;/* (function (context, $) {
-	"use strict";
-	APP = context.APP = {
-		matchHeight: {
-			init: function () {
-				$('.js-equal-heights').matchHeight();
-				$('.home-promo .l_side_block').matchHeight();
-			}
-		}
-	};
-});*/
+; /* (function (context, $) {
+  "use strict";
+  APP = context.APP = {
+  	matchHeight: {
+  		init: function () {
+  			$('.js-equal-heights').matchHeight();
+  			$('.home-promo .l_side_block').matchHeight();
+  		}
+  	}
+  };
+  });*/
 // Toggle Search
 // ------------------------------------------------------------------------------ //
 $("#menu").each(function () {
@@ -396,7 +380,7 @@ var rw = {};
 rw.sectionNav = (function () {
 	'use strict';
 
-	var init = function () {
+	var init = function init() {
 
 		$(document).on('click', '.section_nav button', function () {
 			var parent = $(this).parent('.root');
@@ -404,20 +388,17 @@ rw.sectionNav = (function () {
 			if (parent.hasClass('-open')) {
 				parent.removeClass('-open');
 				parent.next('div').slideToggle();
-			}
-			else {
+			} else {
 				parent.addClass('-open');
 				parent.next('div').slideToggle();
 			}
-
 		});
 	};
 
 	return {
 		init: init
 	};
-
-}());
+})();
 $(function () {
 	rw.sectionNav.init();
 });
@@ -450,12 +431,9 @@ $(window).on("scroll", function () {
 
 // Back top
 $("#back-top").click(function () {
-	$("html, body").animate(
-		{
-			scrollTop: 0,
-		},
-		800
-	);
+	$("html, body").animate({
+		scrollTop: 0
+	}, 800);
 });
 
 /* Lấy từ index*/
@@ -470,8 +448,7 @@ function doEnter(evt) {
 function onSearch(evt) {
 	var keyword = document.getElementById("keyword").value;
 
-	if (keyword == "") alert("Bạn chưa nhập từ khóa!");
-	else {
+	if (keyword == "") alert("Bạn chưa nhập từ khóa!");else {
 		//var encoded = Base64.encode(keyword);
 		location.href = "tim-kiem/keyword=" + keyword;
 		loadPage(document.location);
@@ -482,13 +459,12 @@ function onSearchs(evt) {
 	var tmp = document.getElementById("keywords").value;
 	var tmp1 = document.getElementById("keywords1").value;
 	var keyword = "";
-	if (tmp != "") keyword = tmp;
-	else if (tmp1 != "") keyword = tmp1;
-	if (keyword == "") alert("Bạn chưa nhập từ khóa!");
-	else {
+	if (tmp != "") keyword = tmp;else if (tmp1 != "") keyword = tmp1;
+	if (keyword == "") alert("Bạn chưa nhập từ khóa!");else {
 		//var encoded = Base64.encode(keyword);
 		//location.href = "tim-kiem/keyword="+keyword;
 		//loadPage(document.location);
 		window.location.href = "tim-kiem/keyword=" + keyword;
 	}
 }
+
