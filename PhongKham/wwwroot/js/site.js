@@ -60,7 +60,7 @@
 		},
 	}).mount();
 
-	/*index */
+	/*chat */
 	var s1 = document.createElement("script"),
 		s0 = document.getElementsByTagName("script")[0];
 	s1.async = true;
@@ -69,7 +69,7 @@
 	s1.setAttribute("crossorigin", "*");
 	s0.parentNode.insertBefore(s1, s0);
 
-	$(".mrs-slider").slick({
+	/*$(".mrs-slider").slick({
 		dots: !0,
 		dotsClass: "hero-pagination",
 		infinite: !0,
@@ -82,7 +82,7 @@
 		pauseOnFocus: !0,
 		pauseOnHover: !0,
 		arrows: !0,
-	});
+	});*/
 
 	$("#main-menu").smartmenus({
 		subMenusSubOffsetX: 1,

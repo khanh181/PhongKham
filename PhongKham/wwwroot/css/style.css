@@ -51,7 +51,7 @@ html,body,div,span{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical
     font-family: RR;
     src: url('fonts/RobotoRegular.eot');
     src: url('fonts/RobotoRegular.eot') format('embedded-opentype'),
-         url('fonts/RobotoRegular.woff2') format('woff2'),
+         
          url('fonts/RobotoRegular.woff') format('woff'),
          url('fonts/RobotoRegular.ttf') format('truetype'),
          url('fonts/RobotoRegular.svg#RobotoRegular') format('svg');
@@ -121,7 +121,7 @@ html,body,div,span{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical
     font-family: 'SFUFuturaBook';
     src: url('fonts/SFUFuturaBook.eot');
     src: url('fonts/SFUFuturaBook.eot') format('embedded-opentype'),
-         url('fonts/SFUFuturaBook.woff2') format('woff2'),
+         
          url('fonts/SFUFuturaBook.woff') format('woff'),
          url('fonts/SFUFuturaBook.ttf') format('truetype'),
          url('fonts/SFUFuturaBook.svg#SFUFuturaBook') format('svg');
@@ -265,8 +265,16 @@ body{background: #FFF;}
     }
 #menu.fix{position: fixed; top: 0; left: 0; width: 100%; min-width: 1200px; z-index: 999;}
 .menu-line{position: relative;}
-.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
-.menu-line:first-child:before{position: absolute; content: ''; left: 0; top: 0; width: 1px; height: 100%; background: url(../img/line-menu.png) no-repeat left center;}
+.menu-line:after{position: absolute; content: ''; right: 0; top: 0; width: 1px; height: 100%; background: url(../assets/icon/line-menu.png) no-repeat left center;}
+    .menu-line:first-child:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background: url(../assets/icon/line-menu.png) no-repeat left center;
+    }
 
 /* Slide */
 .home-slider5 .info {
