@@ -1,4 +1,4 @@
-﻿<div id="center" style="min-height: 500px" class="center w-clear margin2s">
+﻿<div id="center" class="center w-clear margin2s">
     <div class="hidden-xs hidden-sm">
         <aside class="g_quarter col-md-3 col-lg-3 col-xs-12 col-sm-12">
             <div class="sidebar-left">
@@ -7,7 +7,7 @@
         </aside>
     </div>
     <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12 ldangnhap content_area g_left_pad news-content">
-        <div class="main-tit"><h2>Đăng nhập</h2></div>
+        <div class="main-tit"><h2>Đăng kí</h2></div>
         <div class="frm-tit">
             <form name="dangnhap"
                   action="#"
@@ -30,18 +30,40 @@
                            name="password"
                            required="" />
                 </div>
+                <div class="form-group">
+                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
+                    <input class="form-control"
+                           type="password"
+                           placeholder="Nhập mật khẩu"
+                           name="password"
+                           required="" />
+                </div>
+                <div class="form-group">
+                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
+                    <input class="form-control"
+                           type="password"
+                           placeholder="Nhập mật khẩu"
+                           name="password"
+                           required="" />
+                </div>
+                <div class="form-group">
+                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
+                    <input class="form-control"
+                           type="password"
+                           placeholder="Nhập mật khẩu"
+                           name="password"
+                           required="" />
+                </div>
                 <div class="form-group form-footer">
                     <p>
-                        Bạn chưa có tài khoản?
-                        <a href="dang-ky" title="Bạn chưa có tài khoản?">Click vào đây!</a>
+                        Bạn đã có tài khoản?
+                        <a asp-action="Index" >Đăng nhập</a>
                     </p>
                     <input class="btn btn-default"
-                           id="btn-dangnhap"
+                           id="btn-dangki"
                            type="submit"
-                           value="Đăng nhập" />
-                    <span class="qmk">
-                        <a href="quen-mat-khau" title="Quên mật khẩu?">Quên mật khẩu?</a>
-                    </span>
+                           value="Đăng kí" />
+
                 </div>
                 <input type="hidden" name="dangnhap" />
             </form>
@@ -55,3 +77,4 @@
         </aside>
     </div>
 </div>
+<script src="~/js/account-bundle.min.js"></script>
