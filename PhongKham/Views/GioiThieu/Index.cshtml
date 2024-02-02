@@ -1,193 +1,768 @@
-﻿
-
-<div id="banner-carousel" class="splide margin2s">
-    <div class="splide__track">
-        <ul class="splide__list">
-            <li class="splide__slide">
-                <img src="~/assets/hinhanh/slide/1_83_anhslide_83_anhslide_83_anhslide.jpg"
-                     alt="anh1" />
-                <div>Sản phẩm 1</div>
-            </li>
-            <li class="splide__slide">
-                <img src="~/assets/hinhanh/slide/banner-web-t2-01_107_anhslide.jpg"
-                     alt="anh2" />
-                <div>Sản phẩm 2</div>
-            </li>
-
-            <li class="splide__slide">
-                <img src="~/assets/hinhanh/slide/testbantay_101_anhslide.png"
-                     alt="anh3" />
-                <div>Sản phẩm 3</div>
-            </li>
-            <li class="splide__slide">
-                <img src="~/assets/hinhanh/slide/uutien-_81_anhslide.png"
-                     alt="anh4" />
-                <div>Sản phẩm 4</div>
-            </li>
-        </ul>
-    </div>
-</div>
-<div id="info" class="margin2s center w-clear">
-    <div class="g_grid ro">
-        <div class="user-type-portals home-promo">
-            <div class="user-type-portals__link-portal -pink g_third m_hero g_omega">
-                <a href="gioi-thieu.html" class="header-link">
-                    <h3>Sản phẩm và dịch vụ</h3>
-                </a>
-                <div class="content is_wysiwyg js-equal-heights">
-                    <ul>
-                        <li>
-                            <a href="#">Gói khám Tầm soát ung thư 1</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Gói khám Tầm soát ung thư 2</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Gói khám Tầm soát ung thư 3</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Gói khám Tầm soát ung thư 4</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="l_side_block">
-                    <a href="gioi-thieu.html" class="button3" title="More details">Xem thêm</a>
-                </div>
-            </div>
-            <div class="user-type-portals__link-portal -pink g_third m_hero g_omega">
-                <a href="gioi-thieu.html" class="header-link">
-                    <h3>Kiến thức về ung thư</h3>
-                </a>
-                <div class="content is_wysiwyg js-equal-heights">
-                    <ul>
-                        <li>
-                            <a href="#">Dự phòng ung thư</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Thăm khám sớm</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Chăm sóc giảm nhẹ</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Dinh dưỡng và ung thư</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                        <li>
-                            <a href="#">Kiến thức & khám phá mới về ung thư</a>
-                            <div>Đang cập nhật ...</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="l_side_block">
-                    <a href="gioi-thieu.html" class="button3" title="More details">Xem thêm</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="news" class="margin2s center w-clear padding-10">
-    <div class="col-md-12">
-        <div class="i-tit w-clear tintucyte">
-            <h2>Tin tức và kiến thức</h2>
-        </div>
-    </div>
-    <div class="col-md-12 news-type">
-        <div class="news-type-name">Tin mới</div>
-        <div class="news-type-name">Lịch công tác</div>
-        <div class="news-type-name">Văn bản</div>
-        <div class="news-type-name">Thông báo</div>
-        <div class="news-type-name">Thư mời</div>
-    </div>
-    <div class="col-md-12 news-type_m">
-        <div id="newstype-carousel"
-             class="splide"
-             aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide news-type-name">Tin mới</li>
-                    <li class="splide__slide news-type-name">Lịch công tác</li>
-                    <li class="splide__slide news-type-name">Văn bản</li>
-                    <li class="splide__slide news-type-name">Thông báo</li>
-                    <li class="splide__slide news-type-name">Thư mời</li>
+﻿<link rel="stylesheet" href="~/css/gioithieu-bundle.min.css" />
+<div id="center" class="center w-clear margin2s">
+    <div class="hidden-xs hidden-sm">
+        <aside class="g_quarter col-md-3 col-lg-3 col-xs-12 col-sm-12">
+            <div class="sidebar-left">
+                <ul class="sidebar-menu">
+                    <li class="has-child">
+                        <a href="#/gioi-thieu-benh-vien-967/index.html">
+                            Giới thiệu bệnh viện<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="has-child">
+                                <a href="#/su-menh-tam-nhin-cam-ket-chien-luoc">
+                                    Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                    <i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/su-menh-tam-nhin-cam-ket-chien-luoc">
+                                            Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/hinh-thanh-phat-trien-964/index.html">
+                                    Hình thành - Phát triển<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/qua-trinh-hinh-thanh-va-phat-trien-969/index.html">Quá trình hình thành và phát triển</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/ban-giam-doc-qua-cac-thoi-ky-970/index.html">Ban Giám đốc qua các thời kỳ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/tong-quan-benh-vien-965/index.html">
+                                    Tổng quan bệnh viện<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/so-do-to-chuc-971/index.html">Sơ đồ tổ chức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/linh-vuc-kham-va-dieu-tri-972/index.html">Lĩnh vực khám và điều trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/thong-tin-lien-he-974/index.html">Thông tin liên hệ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#/thanh-tuu-noi-bat-966/index.html">Thành tựu nổi bật</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="#/co-cau-to-chuc-1006/index.html">
+                            Cơ cấu tổ chức<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li>
+                                <a href="#/dang-uy-ban-giam-doc-1015/index.html">
+                                    Đảng ủy - Ban Giám đốc
+                                </a>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/khoi-hanh-chinh-van-phong-1016/index.html">
+                                    Khối Hành chính văn phòng<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li class="has-child">
+                                        <a href="#/phong-chi-dao-tuyen-1042/index.html">
+                                            Phòng Chỉ đạo tuyến<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/gioi-thieu-phong-chi-dao-tuyen-1143/index.html">
+                                                    Giới thiệu phòng Chỉ đạo tuyến
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#/huan-luyendao-tao-1142/index.html">Huấn luyện-đào tạo</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-cong-nghe-thong-tin-1043/index.html">Phòng Công nghệ thông tin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-cong-tac-xa-hoi-1044/index.html">Phòng Công tác xã hội</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-dieu-duong-1045/index.html">Phòng Điều dưỡng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-hanh-chinh-quan-tri-1046/index.html">Phòng Hành chính quản trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-ke-hoach-tong-hop-1047/index.html">Phòng Kế hoạch tổng hợp</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-quan-ly-chat-luong-1048/index.html">Phòng Quản lý chất lượng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-tai-chinh-ke-toan-1049/index.html">Phòng Tài chính kế toán</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-to-chuc-can-bo-1050/index.html">Phòng Tổ chức cán bộ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-vat-tu-trang-thiet-bi-y-te-1051/index.html">Phòng Vật tư Trang thiết bị y tế</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/khoi-lam-sang-1018/index.html">
+                                    Khối Lâm sàng<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/khoa-cap-cuu-hoi-suc-tich-cuc-chong-doc-1065/index.html">Khoa Cấp cứu - Hồi sức tích cực - Chống độc</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-dinh-duong-tiet-che-1066/index.html">Khoa Dinh dưỡng Tiết chế</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hau-phau-1067/index.html">Khoa Hậu phẫu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hau-san-a-1068/index.html">Khoa Hậu sản A</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hau-san-b-1069/index.html">Khoa Hậu sản B</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hiem-muon-1062/index.html">Khoa Hiếm muộn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-ke-hoach-hoa-gia-dinh-1061/index.html">Khoa Kế hoạch hóa gia đình</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-kham-benh-a-1059/index.html">Khoa Khám bệnh A</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-kham-benh-b-1060/index.html">Khoa Khám bệnh B</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-nhu-1063/index.html">Khoa Nhũ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-phau-thuat-gay-me-hoi-suc-1070/index.html">Khoa Phẫu thuật - Gây mê hồi sức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-phu-ngoai-ung-buou-1071/index.html">Khoa Phụ ngoại ung bướu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-phu-noi-noi-tiet-1072/index.html">Khoa Phụ nội Nội tiết</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-san-benh-1073/index.html">Khoa Sản bệnh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-sanh-1074/index.html">Khoa Sanh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-so-sinh-1064/index.html">Khoa Sơ sinh</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/khoi-can-lam-sang-1019/index.html">
+                                    Khối Cận lâm sàng<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/khoa-chan-doan-hinh-anh-1075/index.html">Khoa Chẩn đoán hình ảnh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-di-truyen-y-hoc-1076/index.html">Khoa Di truyền Y học</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-duoc-1077/index.html">Khoa Dược</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-giai-phau-benh-te-bao-1078/index.html">Khoa Giải phẫu bệnh - Tế bào</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-kiem-soat-nhiem-khuan-1079/index.html">Khoa Kiểm soát nhiễm khuẩn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-xet-nghiem-1080/index.html">Khoa Xét nghiệm</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/doan-the-1040/index.html">
+                                    Đoàn thể<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li class="has-child">
+                                        <a href="#/cong-doan-1081/index.html">
+                                            Công đoàn<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/thong-bao-1110/index.html">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/gioi-thieu-1111/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/hoat-dong-1112/index.html">Hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="#/doan-thanh-nien-1083/index.html">
+                                            Đoàn thanh niên<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/gioi-thieu-1113/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/tin-hoat-dong-1114/index.html">Tin hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="#/hoi-chu-thap-do-1082/index.html">
+                                            Hội chữ thập đỏ<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/tong-hop-hoat-dong-va-thi-dua-khen-thuong-theo-nam-1115/index.html">
+                                                    Tổng hợp hoạt động và thi đua khen thưởng theo
+                                                    năm
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#/thu-chi-tai-chinh-1116/index.html">Thu chi tài chính</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/gioi-thieu-1117/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/thong-bao-1118/index.html">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/hien-mau-nhan-dao-1119/index.html">Hiến máu nhân đạo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/tin-tuc-hoat-dong-1120/index.html">Tin tức hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="#/hoi-cuu-chien-binh-1084/index.html">
+                                            Hội cựu chiến binh<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/thong-bao-1121/index.html">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/gioi-thieu-1122/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/hoat-dong-1123/index.html">Hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/hoi-dong-tham-muu-1041/index.html">
+                                    Hội đồng tham mưu<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/hoi-dong-thi-dua-khen-thuong-1085/index.html">Hội đồng Thi đua khen thưởng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-kiem-soat-nhiem-khuan-1086/index.html">Hội đồng Kiểm soát nhiễm khuẩn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-thuoc-va-dieu-tri-1087/index.html">Hội đồng Thuốc và Điều trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-khoa-hoc-cong-nghe-1088/index.html">Hội đồng Khoa học Công nghệ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-dieu-duong-1089/index.html">Hội đồng Điều dưỡng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-luong-1090/index.html">Hội đồng Lương</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="#/chi-dao-tuyen-hoi-nghi-1092/index.html">
+                            Chỉ đạo tuyến - Hội nghị<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="has-child">
+                                <a href="#/huan-luyen-dao-tao-1095/index.html">
+                                    Huấn luyện - Đào tạo<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/nhan-vien-benh-vien-1103/index.html">Nhân viên bệnh viện</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/doi-tuong-khac-1104/index.html">Đối tượng khác</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#/hoi-nghi-hoi-thao-khoa-hoc-1096/index.html">Hội nghị - Hội thảo khoa học</a>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/sinh-hoat-khoa-hoc-ky-thuat-1098/index.html">
+                                    Sinh hoạt khoa học kỹ thuật<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/lich-to-chuc-sinh-hoat-khoa-hoc-ky-thuat-2023-1134/index.html">
+                                            Lịch tổ chức sinh hoạt khoa học kỹ thuật 2023
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#/tuyen-dung-1093/index.html">Tuyển dụng</a>
+                    </li>
+                    <li>
+                        <a href="#/dau-thau-1145/index.html">Đấu thầu</a>
+                    </li>
+                    <li class="has-child">
+                        <a href="#/su-kien-noi-bat-1094/index.html">
+                            Sự kiện nổi bật<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li>
+                                <a href="#/su-kien-noi-vien-1105/index.html">Sự kiện nội viện</a>
+                            </li>
+                            <li>
+                                <a href="#/su-kien-ngoai-vien-1106/index.html">Sự kiện ngoại viện</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
-        </div>
+        </aside>
     </div>
-    <div class="col-md-12">
-        <div id="news-carousel" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide">
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Dự phòng ung thư </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Thăm khám sớm </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Kiến thức & khám phá mới về ung thư </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
+    <div class="col-md-7 col-lg-7 col-xs-12 col-sm-12 content_area g_left_pad news-content">
+        <div class="l_listing">
+            <div class="main-tit"><h2>Giới thiệu</h2></div>
+            <div class="g_weak g_full_width l_sub_nav">
+                <ul>
+                    <li>
+                        <a href="#/gioi-thieu-benh-vien-967/index.html"
+                           title="Giới thiệu bệnh viện">
+                            <i class="fa fa-folder" aria-hidden="true"></i> Giới thiệu
+                            bệnh viện
+                        </a>
                     </li>
-                    <li class="splide__slide">
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Dự phòng ung thư </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Thăm khám sớm </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Chăm sóc giảm nhẹ </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
+                    <li>
+                        <a href="#/co-cau-to-chuc-1006/index.html"
+                           title="Cơ cấu tổ chức">
+                            <i class="fa fa-folder" aria-hidden="true"></i> Cơ cấu tổ
+                            chức
+                        </a>
                     </li>
-                    <li class="splide__slide">
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Dự phòng ung thư </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Thăm khám sớm </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
-                        <div class="news-inner">
-                            <div class="news-inner-label">
-                                <a> Dinh dưỡng và ung thư </a>
-                            </div>
-                            <div class="news-inner-desc"></div>
-                        </div>
+                    <li>
+                        <a href="#/chi-dao-tuyen-hoi-nghi-1092/index.html"
+                           title="Chỉ đạo tuyến - Hội nghị">
+                            <i class="fa fa-folder" aria-hidden="true"></i> Chỉ đạo tuyến
+                            - Hội nghị
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/tuyen-dung-1093/index.html" title="Tuyển dụng"><i class="fa fa-folder" aria-hidden="true"></i> Tuyển dụng</a>
+                    </li>
+                    <li>
+                        <a href="#/dau-thau-1145/index.html" title="Đấu thầu"><i class="fa fa-folder" aria-hidden="true"></i> Đấu thầu</a>
+                    </li>
+                    <li>
+                        <a href="#/su-kien-noi-bat-1094/index.html"
+                           title="Sự kiện nổi bật">
+                            <i class="fa fa-folder" aria-hidden="true"></i> Sự kiện nổi
+                            bật
+                        </a>
                     </li>
                 </ul>
             </div>
+            <div class="content"></div>
         </div>
     </div>
+    <div class="hidden-md hidden-lg">
+        <aside class="g_quarter col-md-3 col-lg-3 col-xs-12 col-sm-12">
+            <div class="sidebar-left">
+                <ul class="sidebar-menu">
+                    <li class="has-child">
+                        <a href="#/gioi-thieu-benh-vien-967/index.html">
+                            Giới thiệu bệnh viện<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="has-child">
+                                <a href="#/su-menh-tam-nhin-cam-ket-chien-luoc">
+                                    Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                    <i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/su-menh-tam-nhin-cam-ket-chien-luoc">
+                                            Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/hinh-thanh-phat-trien-964/index.html">
+                                    Hình thành - Phát triển<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/qua-trinh-hinh-thanh-va-phat-trien-969/index.html">Quá trình hình thành và phát triển</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/ban-giam-doc-qua-cac-thoi-ky-970/index.html">Ban Giám đốc qua các thời kỳ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/tong-quan-benh-vien-965/index.html">
+                                    Tổng quan bệnh viện<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/so-do-to-chuc-971/index.html">Sơ đồ tổ chức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/linh-vuc-kham-va-dieu-tri-972/index.html">Lĩnh vực khám và điều trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/thong-tin-lien-he-974/index.html">Thông tin liên hệ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#/thanh-tuu-noi-bat-966/index.html">Thành tựu nổi bật</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="#/co-cau-to-chuc-1006/index.html">
+                            Cơ cấu tổ chức<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li>
+                                <a href="#/dang-uy-ban-giam-doc-1015/index.html">
+                                    Đảng ủy - Ban Giám đốc
+                                </a>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/khoi-hanh-chinh-van-phong-1016/index.html">
+                                    Khối Hành chính văn phòng<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li class="has-child">
+                                        <a href="#/phong-chi-dao-tuyen-1042/index.html">
+                                            Phòng Chỉ đạo tuyến<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/gioi-thieu-phong-chi-dao-tuyen-1143/index.html">
+                                                    Giới thiệu phòng Chỉ đạo tuyến
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#/huan-luyendao-tao-1142/index.html">Huấn luyện-đào tạo</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-cong-nghe-thong-tin-1043/index.html">Phòng Công nghệ thông tin</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-cong-tac-xa-hoi-1044/index.html">Phòng Công tác xã hội</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-dieu-duong-1045/index.html">Phòng Điều dưỡng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-hanh-chinh-quan-tri-1046/index.html">Phòng Hành chính quản trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-ke-hoach-tong-hop-1047/index.html">Phòng Kế hoạch tổng hợp</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-quan-ly-chat-luong-1048/index.html">Phòng Quản lý chất lượng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-tai-chinh-ke-toan-1049/index.html">Phòng Tài chính kế toán</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-to-chuc-can-bo-1050/index.html">Phòng Tổ chức cán bộ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/phong-vat-tu-trang-thiet-bi-y-te-1051/index.html">Phòng Vật tư Trang thiết bị y tế</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/khoi-lam-sang-1018/index.html">
+                                    Khối Lâm sàng<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/khoa-cap-cuu-hoi-suc-tich-cuc-chong-doc-1065/index.html">Khoa Cấp cứu - Hồi sức tích cực - Chống độc</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-dinh-duong-tiet-che-1066/index.html">Khoa Dinh dưỡng Tiết chế</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hau-phau-1067/index.html">Khoa Hậu phẫu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hau-san-a-1068/index.html">Khoa Hậu sản A</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hau-san-b-1069/index.html">Khoa Hậu sản B</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-hiem-muon-1062/index.html">Khoa Hiếm muộn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-ke-hoach-hoa-gia-dinh-1061/index.html">Khoa Kế hoạch hóa gia đình</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-kham-benh-a-1059/index.html">Khoa Khám bệnh A</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-kham-benh-b-1060/index.html">Khoa Khám bệnh B</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-nhu-1063/index.html">Khoa Nhũ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-phau-thuat-gay-me-hoi-suc-1070/index.html">Khoa Phẫu thuật - Gây mê hồi sức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-phu-ngoai-ung-buou-1071/index.html">Khoa Phụ ngoại ung bướu</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-phu-noi-noi-tiet-1072/index.html">Khoa Phụ nội Nội tiết</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-san-benh-1073/index.html">Khoa Sản bệnh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-sanh-1074/index.html">Khoa Sanh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-so-sinh-1064/index.html">Khoa Sơ sinh</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/khoi-can-lam-sang-1019/index.html">
+                                    Khối Cận lâm sàng<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/khoa-chan-doan-hinh-anh-1075/index.html">Khoa Chẩn đoán hình ảnh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-di-truyen-y-hoc-1076/index.html">Khoa Di truyền Y học</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-duoc-1077/index.html">Khoa Dược</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-giai-phau-benh-te-bao-1078/index.html">Khoa Giải phẫu bệnh - Tế bào</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-kiem-soat-nhiem-khuan-1079/index.html">Khoa Kiểm soát nhiễm khuẩn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/khoa-xet-nghiem-1080/index.html">Khoa Xét nghiệm</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/doan-the-1040/index.html">
+                                    Đoàn thể<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li class="has-child">
+                                        <a href="#/cong-doan-1081/index.html">
+                                            Công đoàn<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/thong-bao-1110/index.html">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/gioi-thieu-1111/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/hoat-dong-1112/index.html">Hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="#/doan-thanh-nien-1083/index.html">
+                                            Đoàn thanh niên<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/gioi-thieu-1113/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/tin-hoat-dong-1114/index.html">Tin hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="#/hoi-chu-thap-do-1082/index.html">
+                                            Hội chữ thập đỏ<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/tong-hop-hoat-dong-va-thi-dua-khen-thuong-theo-nam-1115/index.html">
+                                                    Tổng hợp hoạt động và thi đua khen thưởng theo
+                                                    năm
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#/thu-chi-tai-chinh-1116/index.html">Thu chi tài chính</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/gioi-thieu-1117/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/thong-bao-1118/index.html">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/hien-mau-nhan-dao-1119/index.html">Hiến máu nhân đạo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/tin-tuc-hoat-dong-1120/index.html">Tin tức hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-child">
+                                        <a href="#/hoi-cuu-chien-binh-1084/index.html">
+                                            Hội cựu chiến binh<i class="icon fa fa-chevron-circle-right"></i>
+                                        </a>
+                                        <ul class="menu-sub">
+                                            <li>
+                                                <a href="#/thong-bao-1121/index.html">Thông báo</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/gioi-thieu-1122/index.html">Giới thiệu</a>
+                                            </li>
+                                            <li>
+                                                <a href="#/hoat-dong-1123/index.html">Hoạt động</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/hoi-dong-tham-muu-1041/index.html">
+                                    Hội đồng tham mưu<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/hoi-dong-thi-dua-khen-thuong-1085/index.html">Hội đồng Thi đua khen thưởng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-kiem-soat-nhiem-khuan-1086/index.html">Hội đồng Kiểm soát nhiễm khuẩn</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-thuoc-va-dieu-tri-1087/index.html">Hội đồng Thuốc và Điều trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-khoa-hoc-cong-nghe-1088/index.html">Hội đồng Khoa học Công nghệ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-dieu-duong-1089/index.html">Hội đồng Điều dưỡng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/hoi-dong-luong-1090/index.html">Hội đồng Lương</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a href="#/chi-dao-tuyen-hoi-nghi-1092/index.html">
+                            Chỉ đạo tuyến - Hội nghị<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="has-child">
+                                <a href="#/huan-luyen-dao-tao-1095/index.html">
+                                    Huấn luyện - Đào tạo<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/nhan-vien-benh-vien-1103/index.html">Nhân viên bệnh viện</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/doi-tuong-khac-1104/index.html">Đối tượng khác</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#/hoi-nghi-hoi-thao-khoa-hoc-1096/index.html">Hội nghị - Hội thảo khoa học</a>
+                            </li>
+                            <li class="has-child">
+                                <a href="#/sinh-hoat-khoa-hoc-ky-thuat-1098/index.html">
+                                    Sinh hoạt khoa học kỹ thuật<i class="icon fa fa-chevron-circle-right"></i>
+                                </a>
+                                <ul class="menu-sub">
+                                    <li>
+                                        <a href="#/lich-to-chuc-sinh-hoat-khoa-hoc-ky-thuat-2023-1134/index.html">
+                                            Lịch tổ chức sinh hoạt khoa học kỹ thuật 2023
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#/tuyen-dung-1093/index.html">Tuyển dụng</a>
+                    </li>
+                    <li>
+                        <a href="#/dau-thau-1145/index.html">Đấu thầu</a>
+                    </li>
+                    <li class="has-child">
+                        <a href="#/su-kien-noi-bat-1094/index.html">
+                            Sự kiện nổi bật<i class="icon fa fa-chevron-circle-right"></i>
+                        </a>
+                        <ul class="menu-sub">
+                            <li>
+                                <a href="#/su-kien-noi-vien-1105/index.html">Sự kiện nội viện</a>
+                            </li>
+                            <li>
+                                <a href="#/su-kien-ngoai-vien-1106/index.html">Sự kiện ngoại viện</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
 </div>
+<script src="~/js/gioithieu-bundle.min.js"></script>

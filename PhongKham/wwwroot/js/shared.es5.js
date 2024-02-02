@@ -62,7 +62,7 @@ $(document).ready(function () {
 		}
 	}).mount();
 
-	/*index */
+	/*chat */
 	var s1 = document.createElement("script"),
 	    s0 = document.getElementsByTagName("script")[0];
 	s1.async = true;
@@ -71,30 +71,30 @@ $(document).ready(function () {
 	s1.setAttribute("crossorigin", "*");
 	s0.parentNode.insertBefore(s1, s0);
 
-	$(".mrs-slider").slick({
-		dots: !0,
-		dotsClass: "hero-pagination",
-		infinite: !0,
-		speed: 500,
-		fade: !0,
-		cssEase: "linear",
-		autoplay: !0,
-		autoplaySpeed: 1e4,
-		adaptiveHeight: !0,
-		pauseOnFocus: !0,
-		pauseOnHover: !0,
-		arrows: !0
-	});
+	/*$(".mrs-slider").slick({
+ 	dots: !0,
+ 	dotsClass: "hero-pagination",
+ 	infinite: !0,
+ 	speed: 500,
+ 	fade: !0,
+ 	cssEase: "linear",
+ 	autoplay: !0,
+ 	autoplaySpeed: 1e4,
+ 	adaptiveHeight: !0,
+ 	pauseOnFocus: !0,
+ 	pauseOnHover: !0,
+ 	arrows: !0,
+ });*/
 
-	$("#main-menu").smartmenus({
-		subMenusSubOffsetX: 1,
-		subMenusSubOffsetY: -8
-	});
-
-	$("#main-menus").smartmenus({
-		subMenusSubOffsetX: 1,
-		subMenusSubOffsetY: -8
-	});
+	/*$("#main-menu").smartmenus({
+ 	subMenusSubOffsetX: 1,
+ 	subMenusSubOffsetY: -8,
+ });
+ 
+ $("#main-menus").smartmenus({
+ 	subMenusSubOffsetX: 1,
+ 	subMenusSubOffsetY: -8,
+ });*/
 });
 
 /*my js*/

@@ -1,5 +1,5 @@
 [
-    //css
+  //css
   {
     "outputFileName": "wwwroot/css/lib.min.css",
     "inputFiles": [
@@ -27,7 +27,38 @@
       "renameLocals": true
     }
   },
-    // js
+  {
+    "outputFileName": "wwwroot/css/home-bundle.min.css",
+    "inputFiles": [
+      "wwwroot/css/file/style.css",
+      "wwwroot/css/file/newstyle.css",
+      "wwwroot/css/lib/splide.min.css",
+      "wwwroot/css/lib/sm-blue.css",
+      "wwwroot/css/lib/sm-core-css.css",
+      "wwwroot/css/lib/bootstrap.min.css"
+
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/css/gioithieu-bundle.min.css",
+    "inputFiles": [
+      "wwwroot/css/file/style.css",
+      "wwwroot/css/file/newstyle.css",
+      "wwwroot/css/lib/sm-blue.css",
+      "wwwroot/css/lib/sm-core-css.css",
+      "wwwroot/css/lib/bootstrap.min.css"
+
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  // js
   {
     "outputFileName": "wwwroot/js/lib.min.js",
     "inputFiles": [
@@ -47,9 +78,44 @@
     "sourceMap": false
   },
   {
-    "outputFileName": "wwwroot/js/site.min.js",
+    "outputFileName": "wwwroot/js/shared.min.js",
     "inputFiles": [
-      "wwwroot/js/site.js"
+      "wwwroot/js/shared.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/home-bundle.min.js",
+    "inputFiles": [
+      "wwwroot/js/lib/jquery-3.5.1.min.js",
+      "wwwroot/js/lib/jquery-ui.min.js",
+      "wwwroot/js/lib/bootstrap.min.js",
+      "wwwroot/js/lib/jquery.smartmenus.js",
+      "wwwroot/js/lib/splide.min.js",
+      "wwwroot/js/shared.js",
+      "wwwroot/js/file/home.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/gioithieu-bundle.min.js",
+    "inputFiles": [
+      "wwwroot/js/lib/jquery-3.5.1.min.js",
+      "wwwroot/js/lib/jquery-ui.min.js",
+      "wwwroot/js/lib/bootstrap.min.js",
+      "wwwroot/js/lib/jquery.smartmenus.js",
+      "wwwroot/js/shared.js"
+      
     ],
     "minify": {
       "enabled": true,
@@ -58,4 +124,4 @@
     // Optionally generate .map file
     "sourceMap": false
   }
-  ]
+]
