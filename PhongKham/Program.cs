@@ -8,10 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-/*builder.Services.AddDbContext<ApplycationDbContext>(option =>
-    option.UseSqlServer("Server=.;Database=Bulky;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true")
-);
-*/
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -55,19 +52,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// Thêm chức năng chuyển hướng tại đây
+/*app.MapGet("/account/dang-ky", () => Results.Redirect("/dang-ky"));
+app.MapGet("/dang-nhap/{*slug}", (string slug) => Results.Redirect($"/dang-ky/{slug}"));*/
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-/* tạo trang vào default*/
-app.Use(async (context, next) =>
-{
-    if (context.Request.Path == "/account/index")
-    {
-        context.Response.Redirect("/dang-nhap");
-        return;
-    }
+     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-    await next();
-});
-
+app.MapControllers();
 app.Run();
