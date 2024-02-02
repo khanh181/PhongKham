@@ -44,7 +44,7 @@
     }
   },
   {
-    "outputFileName": "wwwroot/css/gioithieu-bundle.min.css",
+    "outputFileName": "wwwroot/css/common.min.css",
     "inputFiles": [
       "wwwroot/css/file/style.css",
       "wwwroot/css/file/newstyle.css",

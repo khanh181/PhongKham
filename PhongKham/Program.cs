@@ -1,7 +1,6 @@
 ﻿
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
-using PhongKham.DataBase;
 using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -58,13 +57,13 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{path = trangchu}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 /* tạo trang vào default*/
 app.Use(async (context, next) =>
 {
-    if (context.Request.Path == "/")
+    if (context.Request.Path == "/account/index")
     {
-        context.Response.Redirect("/trangchu");
+        context.Response.Redirect("/dang-nhap");
         return;
     }
 
