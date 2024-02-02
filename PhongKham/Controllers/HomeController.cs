@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace PhongKham.Controllers
 {
+    
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -12,7 +13,7 @@ namespace PhongKham.Controllers
         {
             _logger = logger;
         }
-
+        [Route("trangchu")]
         public IActionResult Index()
         {
             return View();
