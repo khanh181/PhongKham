@@ -289,6 +289,9 @@
 #center .ldangnhap .frm-tit .btn {
   background-color: var(--main-color);
 }
+#center .ldangnhap .frm-tit .form-group {
+  margin-inline: 0px !important;
+}
 
 #footer {
   background-color: #ebf0f5;
