@@ -1,4 +1,6 @@
 ﻿$(document).ready(function () {
+	$("#main-menu li").eq(0).addClass("activem");
+	$("#main-menus li").eq(0).addClass("activem");
 	new Splide("#banner-carousel", {
 		start: 0,
 		perMove: 1,
@@ -49,4 +51,5 @@
 			},
 		},
 	}).mount();
+
 })

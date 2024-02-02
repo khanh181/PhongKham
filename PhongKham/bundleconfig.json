@@ -27,30 +27,16 @@
       "renameLocals": true
     }
   },
+  
   {
-    "outputFileName": "wwwroot/css/home-bundle.min.css",
+    "outputFileName": "wwwroot/css/common-bundle.min.css",
     "inputFiles": [
       "wwwroot/css/file/style.css",
       "wwwroot/css/file/newstyle.css",
-      "wwwroot/css/lib/splide.min.css",
-      "wwwroot/css/lib/sm-blue.css",
+      "wwwroot/css/lib/bootstrap.min.css",
       "wwwroot/css/lib/sm-core-css.css",
-      "wwwroot/css/lib/bootstrap.min.css"
+      "wwwroot/css/lib/sm-blue.css"
 
-    ],
-    "minify": {
-      "enabled": true,
-      "renameLocals": true
-    }
-  },
-  {
-    "outputFileName": "wwwroot/css/gioithieu-bundle.min.css",
-    "inputFiles": [
-      "wwwroot/css/file/style.css",
-      "wwwroot/css/file/newstyle.css",
-      "wwwroot/css/lib/sm-blue.css",
-      "wwwroot/css/lib/sm-core-css.css",
-      "wwwroot/css/lib/bootstrap.min.css"
 
     ],
     "minify": {
@@ -114,7 +100,8 @@
       "wwwroot/js/lib/jquery-ui.min.js",
       "wwwroot/js/lib/bootstrap.min.js",
       "wwwroot/js/lib/jquery.smartmenus.js",
-      "wwwroot/js/shared.js"
+      "wwwroot/js/shared.js",
+      "wwwroot/js/file/gioithieu.js"
       
     ],
     "minify": {
