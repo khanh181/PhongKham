@@ -1,17 +1,15 @@
-﻿
-using Microsoft.AspNetCore.Diagnostics;
+﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -60,4 +58,16 @@ app.MapControllerRoute(
      pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllers();
+
+// Middleware xử lý lỗi 404
+app.UseStatusCodePages(async context =>
+{
+    context.HttpContext.Response.ContentType = "text/plain";
+
+    if (context.HttpContext.Response.StatusCode == 404)
+    {
+        context.HttpContext.Response.Redirect("/Error");
+    }
+});
+
 app.Run();
