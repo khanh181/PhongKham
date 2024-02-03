@@ -13,7 +13,7 @@ namespace PhongKham.Controllers
         {
             _logger = logger;
         }
-        /*[Route("trangchu")]*/
+        /*[Route("/")]*/
         public IActionResult Index()
         {
             return View();
@@ -23,7 +23,7 @@ namespace PhongKham.Controllers
         {
             return View();
         }
-
+        [Route("/Error")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

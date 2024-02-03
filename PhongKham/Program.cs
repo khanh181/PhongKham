@@ -1,20 +1,15 @@
-﻿
-using Microsoft.AspNetCore.Diagnostics;
+﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using static System.Net.Mime.MediaTypeNames;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-/*builder.Services.AddDbContext<ApplycationDbContext>(option =>
-    option.UseSqlServer("Server=.;Database=Bulky;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true")
-);
-*/
+builder.Services.AddControllers();
 
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -55,19 +50,24 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+// Thêm chức năng chuyển hướng tại đây
+/*app.MapGet("/account/dang-ky", () => Results.Redirect("/dang-ky"));
+app.MapGet("/dang-nhap/{*slug}", (string slug) => Results.Redirect($"/dang-ky/{slug}"));*/
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-/* tạo trang vào default*/
-app.Use(async (context, next) =>
-{
-    if (context.Request.Path == "/account/index")
-    {
-        context.Response.Redirect("/dang-nhap");
-        return;
-    }
+     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-    await next();
+app.MapControllers();
+
+// Middleware xử lý lỗi 404
+app.UseStatusCodePages(async context =>
+{
+    context.HttpContext.Response.ContentType = "text/plain";
+
+    if (context.HttpContext.Response.StatusCode == 404)
+    {
+        context.HttpContext.Response.Redirect("/Error");
+    }
 });
 
 app.Run();

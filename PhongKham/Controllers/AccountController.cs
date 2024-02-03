@@ -4,7 +4,7 @@ namespace PhongKham.Controllers
 {
     public class AccountController : Controller
     {
-        [Route("dang-nhap")]
+        [Route("dang-nhap/{*slug}")]
         public IActionResult Index()
         {
             return View();

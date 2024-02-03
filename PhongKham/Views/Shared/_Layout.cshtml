@@ -463,7 +463,7 @@
                       </ul>
                     </li> -->
                     <li class="menu-line">
-                        @Html.ActionLink("Đăng nhập", "Index", "Account")
+                        @Html.ActionLink("Đăng nhập", "Index", "Account", new { slug = 1 }, null)
                     </li>
                     <!-- <li class="menu-line">
                       <a href="index.html"
@@ -783,7 +783,7 @@
                         </ul>
                     </li>
                     <li class="menu-line">
-                        <a href="dang-nhap.html">Đăng nhập</a>
+                        @Html.ActionLink("Đăng nhập", "Index", "Account")
                     </li>
                 </ul>
             </div>
