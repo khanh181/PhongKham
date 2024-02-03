@@ -282,6 +282,9 @@
   color: white;
 }
 
+#center .ldangnhap a {
+  cursor: pointer;
+}
 #center .ldangnhap .main-tit h2 {
   color: var(--main-color);
   border-color: var(--main-color);
@@ -291,6 +294,29 @@
 }
 #center .ldangnhap .frm-tit .form-group {
   margin-inline: 0px !important;
+}
+#center .news-content {
+  margin-top: 5px;
+}
+
+#ModalFP {
+  top: 15%;
+}
+#ModalFP a {
+  cursor: pointer;
+}
+#ModalFP #OTPForm {
+  display: none;
+  margin-top: 10px;
+}
+#ModalFP #OTPForm input[type=text] {
+  display: inline;
+  width: 200px;
+  margin-bottom: 5px;
+  margin-inline: 5px;
+}
+#ModalFP #OTPForm input[type=submit] {
+  margin-top: -1px;
 }
 
 #footer {
