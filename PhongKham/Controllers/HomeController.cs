@@ -23,11 +23,11 @@ namespace PhongKham.Controllers
         {
             return View();
         }
-        [Route("/Error")]
+        [Route("/Error/{*slug}")]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier, StatusCode = HttpContext.Response.StatusCode });
         }
     }
 }

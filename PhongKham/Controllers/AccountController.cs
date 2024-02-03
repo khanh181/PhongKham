@@ -9,7 +9,7 @@ namespace PhongKham.Controllers
         {
             return View();
         }
-        [Route("dang-ky")]
+        [Route("dang-ky/{*slug}")]
         public IActionResult DangKy()
         {
             return View();

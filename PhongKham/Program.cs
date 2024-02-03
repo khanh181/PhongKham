@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using static System.Net.Mime.MediaTypeNames;
+using PhongKham;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,25 +50,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
-
-// Thêm chức năng chuyển hướng tại đây
-/*app.MapGet("/account/dang-ky", () => Results.Redirect("/dang-ky"));
-app.MapGet("/dang-nhap/{*slug}", (string slug) => Results.Redirect($"/dang-ky/{slug}"));*/
-app.MapControllerRoute(
-    name: "default",
-     pattern: "{controller=Home}/{action=Index}/{id?}");
-
-app.MapControllers();
-
-// Middleware xử lý lỗi 404
-app.UseStatusCodePages(async context =>
-{
-    context.HttpContext.Response.ContentType = "text/plain";
-
-    if (context.HttpContext.Response.StatusCode == 404)
-    {
-        context.HttpContext.Response.Redirect("/Error");
-    }
-});
+//router
+RouteConfig.MapRoutes(app);
 
 app.Run();
