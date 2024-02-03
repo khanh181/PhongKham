@@ -1,4 +1,13 @@
 ﻿$(document).ready(function () {
+	$("#back-top").click(function () {
+		
+		$("html, body").animate(
+			{
+				scrollTop: 0,
+			},
+			800
+		);
+	});
 	/*new js*/
 	$("#smenu svg").click(function () {
 		$("#menus").slideToggle();
@@ -44,8 +53,7 @@
 		subMenusSubOffsetX: 1,
 		subMenusSubOffsetY: -8,
 	});*/
-
-
+	
 });
 
 /*my js*/
@@ -246,6 +254,7 @@ $(".tbl-giohang").on("click", ".del-cart", function (event) {
 	return false;
 });
 
+
 $(".ajax_cart").click(function (event) {
 	/* Xu ly gio hang*/
 	var id = $(this).attr("data-id");
@@ -400,14 +409,7 @@ $(window).on("scroll", function () {
 });
 
 // Back top
-$("#back-top").click(function () {
-	$("html, body").animate(
-		{
-			scrollTop: 0,
-		},
-		800
-	);
-});
+
 
 /* Lấy từ index*/
 

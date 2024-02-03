@@ -4,7 +4,15 @@
     "inputFile": "wwwroot/css/style.scss"
   },
   {
-    "outputFile": "wwwroot/js/site.es5.js",
-    "inputFile": "wwwroot/js/site.js"
+    "outputFile": "wwwroot/css/file/newstyle.css",
+    "inputFile": "wwwroot/css/file/newstyle.scss"
+  },
+  {
+    "outputFile": "wwwroot/js/file/account.es5.js",
+    "inputFile": "wwwroot/js/file/account.js"
+  },
+  {
+    "outputFile": "wwwroot/js/shared.es5.js",
+    "inputFile": "wwwroot/js/shared.js"
   }
 ]
