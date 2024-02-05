@@ -11,9 +11,20 @@
 
         private static void MapDefaultRoute(WebApplication app)
         {
-            app.MapControllerRoute(
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "Router1",
+                    pattern: "Common/{type}-{id}",
+                    defaults: new { controller = "Common", action = "Index" }
+                );
+                // ... (các định tuyến khác hoặc endpoints.MapDefaultControllerRoute() nếu cần)
+                endpoints.MapDefaultControllerRoute();
+            });
+
+            /*app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");*/
         }
         /*private static void MapDefaultRoute(WebApplication app)
         {
