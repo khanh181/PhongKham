@@ -7,14 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\**" />
     <Compile Remove="wwwroot\lib\fontawesome\**" />
+    <Content Remove="Data\**" />
     <Content Remove="wwwroot\lib\fontawesome\**" />
+    <EmbeddedResource Remove="Data\**" />
     <EmbeddedResource Remove="wwwroot\lib\fontawesome\**" />
+    <None Remove="Data\**" />
     <None Remove="wwwroot\lib\fontawesome\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Data\AppDbContext.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
     <None Include="compilerconfig.json" />
     <None Include="wwwroot\css\fonts\glyphicons-halflings-regular.svg.tmp" />
     <None Include="wwwroot\css\fonts\glyphicons-halflings-regular.woff2.tmp" />
@@ -52,7 +53,9 @@
 
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.1" />
+	  <PackageReference Include="Dapper" Version="2.1.28" />
+	  <PackageReference Include="EnyimMemcachedCore" Version="3.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1">
@@ -60,10 +63,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,9 @@
-﻿<link rel="stylesheet" href="~/css/lib/splide.min.css" />
+﻿@model List<PhongKham.Models.TinhModel>
+@{
+    
+}
+<section>
+<link rel="stylesheet" href="~/css/lib/splide.min.css" />
 <div id="banner-carousel"
      class="splide margin2s"
      aria-label="Beautiful Images">
@@ -100,11 +105,15 @@
         </div>
     </div>
     <div class="col-md-12 news-type">
-        <div class="news-type-name">Tin mới</div>
+        @* <div class="news-type-name">Tin mới</div>
         <div class="news-type-name">Lịch công tác</div>
         <div class="news-type-name">Văn bản</div>
         <div class="news-type-name">Thông báo</div>
-        <div class="news-type-name">Thư mời</div>
+        <div class="news-type-name">Thư mời</div> *@
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div class="news-type-name">@Model[i].Ten</div>
+        }
     </div>
     <div class="col-md-12 news-type_m">
         <div id="newstype-carousel"
@@ -191,3 +200,4 @@
     </div>
 </div>
 <script src="~/js/home-bundle.min.js"></script>
+</section>

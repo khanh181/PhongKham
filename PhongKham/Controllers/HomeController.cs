@@ -1,38 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PhongKham.Common;
 using PhongKham.Models;
+using System.Data;
 using System.Diagnostics;
 
 namespace PhongKham.Controllers
 {
-    
+
     public class HomeController : Controller
     {
+        private readonly PKDbContext _db;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, PKDbContext pkDbContext)
         {
             _logger = logger;
+            _db = pkDbContext;
         }
         /*[Route("/")]*/
         public IActionResult Index()
         {
-            string cookieValue = string.Empty;
-
-            // Kiểm tra xem cookie "TestCookie" đã được đặt hay chưa
-            bool hasCookie = CookiesHelper.HasKey(HttpContext, "TestCookie");
-
-            if (hasCookie)
-            {
-                // Cookie đã được đặt, lấy giá trị
-                cookieValue = CookiesHelper.GetValue(HttpContext, "TestCookie");
-            }
-            else
-            {
-                // Cookie chưa được đặt, đặt giá trị
-                CookiesHelper.SetValue(HttpContext, "TestCookie", "Hello, World!", 1);
-                cookieValue = "Hello, World!";
-            }
             return View();
         }
 
