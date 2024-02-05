@@ -445,3 +445,47 @@ function onSearchs(evt) {
 		window.location.href = "tim-kiem/keyword=" + keyword;
 	}
 }
+
+//----------Phần Cookie---------------
+function setCookie(cname, cvalue) {
+	var d = new Date();
+	d.setTime(d.getTime() + (7300 * 24 * 60 * 60 * 1000));
+	var expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var ca = document.cookie.split(';');
+	for (var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+function checkCookieEnable() {
+	var enabled = (navigator.cookieEnabled) ? 1 : 0;
+	if (typeof navigator.cookieEnabled == "undefined" && enabled == 0) {
+		document.cookie = "testcookie";
+		enabled = (document.cookie.indexOf("test­cookie") != -1) ? 1 : 0;
+	}
+	if (enabled == 1) {
+		setCookieCheck("CHECK_COOKIES", "1", 365);
+	}
+}
+
+function setCookieCheck(name, value, days) {
+	var expires = "";
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+		expires = "; expires=" + date.toUTCString();
+	}
+	document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
