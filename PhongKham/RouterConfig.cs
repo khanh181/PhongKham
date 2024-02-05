@@ -9,19 +9,19 @@
             UseCustomStatusCodePages(app);
         }
 
-        /*  private static void MapDefaultRoute(WebApplication app)
-          {
-              app.MapControllerRoute(
-                  name: "default",
-                  pattern: "{controller=Home}/{action=Index}/{id?}");
-          }*/
         private static void MapDefaultRoute(WebApplication app)
         {
             app.MapControllerRoute(
                 name: "default",
-                pattern: "trang-chu/{id?}",
-                defaults: new { controller = "Home", action = "Index" });
+                pattern: "{controller=Home}/{action=Index}/{id?}");
         }
+        /* private static void MapDefaultRoute(WebApplication app)
+         {
+             app.MapControllerRoute(
+                 name: "default",
+                 pattern: "trang-chu/{id?}",
+                 defaults: new { controller = "Home", action = "Index" });
+         }*/
 
         private static void MapDangKyRoute(WebApplication app)
         {
