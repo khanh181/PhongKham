@@ -6,16 +6,16 @@
         {
            /* MapDangKyRoute(app);*/
             MapDefaultRoute(app);
-            UseCustomStatusCodePages(app);
+            //UseCustomStatusCodePages(app);
         }
 
-        /*  private static void MapDefaultRoute(WebApplication app)
-          {
-              app.MapControllerRoute(
-                  name: "default",
-                  pattern: "{controller=Home}/{action=Index}/{id?}");
-          }*/
         private static void MapDefaultRoute(WebApplication app)
+        {
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+        }
+        /*private static void MapDefaultRoute(WebApplication app)
         {
             app.MapControllerRoute(
                 name: "default",
@@ -29,7 +29,7 @@
                 name: "dang-ky",
                 pattern: "dang-ky/{*slug}",
                 defaults: new { controller = "Account", action = "Index" });
-        }
+        }*/
 
         private static void UseCustomStatusCodePages(WebApplication app)
         {
