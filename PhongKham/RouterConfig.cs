@@ -6,7 +6,8 @@
         {
            /* MapDangKyRoute(app);*/
             MapDefaultRoute(app);
-            //UseCustomStatusCodePages(app);
+            //MapCommonRoute(app);
+            UseCustomStatusCodePages(app);
         }
 
         private static void MapDefaultRoute(WebApplication app)
@@ -21,24 +22,21 @@
                 // ... (các định tuyến khác hoặc endpoints.MapDefaultControllerRoute() nếu cần)
                 endpoints.MapDefaultControllerRoute();
             });
-
-            /*app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");*/
         }
-        /*private static void MapDefaultRoute(WebApplication app)
+      /*  private static void MapDefaultRoute(WebApplication app)
         {
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
-        }
+                pattern: "{controller=Home}/{action=Index}/{id?}",
+                defaults: new { controller = "Common", action = "Index" });
+        }*/
         /* private static void MapDefaultRoute(WebApplication app)
          {
              app.MapControllerRoute(
                  name: "default",
                  pattern: "trang-chu/{id?}",
                  defaults: new { controller = "Home", action = "Index" });
-         }*/
+         }
 
         private static void MapDangKyRoute(WebApplication app)
         {
