@@ -4,9 +4,9 @@
     {
         public static void MapRoutes(WebApplication app)
         {
-           /* MapDangKyRoute(app);*/
             MapDefaultRoute(app);
-            //MapCommonRoute(app);
+            /*MapDangKyRoute(app);*/
+            /* MapDefaultRoute(app);*/
             UseCustomStatusCodePages(app);
         }
 
@@ -23,20 +23,20 @@
                 endpoints.MapDefaultControllerRoute();
             });
         }
+        /*  private static void MapDefaultRoute(WebApplication app)
+          {
+              app.MapControllerRoute(
+                  name: "default",
+                  pattern: "{controller=Home}/{action=Index}/{id?}",
+                  defaults: new { controller = "Common", action = "Index" });
+          }*/
       /*  private static void MapDefaultRoute(WebApplication app)
         {
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}",
-                defaults: new { controller = "Common", action = "Index" });
+                pattern: "trang-chu/{id?}",
+                defaults: new { controller = "Home", action = "Index" });
         }*/
-        /* private static void MapDefaultRoute(WebApplication app)
-         {
-             app.MapControllerRoute(
-                 name: "default",
-                 pattern: "trang-chu/{id?}",
-                 defaults: new { controller = "Home", action = "Index" });
-         }
 
         private static void MapDangKyRoute(WebApplication app)
         {
@@ -44,7 +44,7 @@
                 name: "dang-ky",
                 pattern: "dang-ky/{*slug}",
                 defaults: new { controller = "Account", action = "Index" });
-        }*/
+        }
 
         private static void UseCustomStatusCodePages(WebApplication app)
         {

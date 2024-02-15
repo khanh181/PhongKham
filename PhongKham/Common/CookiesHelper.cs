@@ -65,5 +65,20 @@ namespace PhongKham.Common
                 return Guid.NewGuid().ToString();
             }
         }
+
+        internal static bool HasCookies()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static string? GetValue(string lOGIN_AUTHEN_COOKIES)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void SetValue(string lOGIN_AUTHEN_COOKIES, string v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

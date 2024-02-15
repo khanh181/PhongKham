@@ -5,6 +5,14 @@ using static System.Net.Mime.MediaTypeNames;
 using PhongKham;
 using PhongKham.Database;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using PhongKham.Models;
+using Microsoft.AspNetCore.Identity;
+using PhongKham.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Data.SqlClient;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +31,25 @@ builder.Services.AddAuthentication(options =>
     options.Authority = builder.Configuration["Jwt:Authority"];
     options.Audience = builder.Configuration["Jwt:Audience"];
     options.RequireHttpsMetadata = false;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    };
+});
+
+// Add services to the container.
+builder.Services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(1); // You can set Time here 
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 var app = builder.Build();
@@ -59,6 +86,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Ensure the app uses session state.
+app.UseSession();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -67,7 +97,6 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseAuthorization();
 //router
 RouteConfig.MapRoutes(app);
 

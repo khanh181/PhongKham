@@ -7,6 +7,9 @@
             public class Stored
             {
                 public const string GetTinhAll = @"[PartnerManagerV2_Tinh_Select]";
+
+                // Phần tài khoản
+                public const string NguoiDungGetIdentityBySdt = @"[PhongKham_NguoiDungGetIdentityBySdt]";
             }
         }
         public static string PROVINCE_ID_COOKIES = "PROVINCE_ID_COOKIES";

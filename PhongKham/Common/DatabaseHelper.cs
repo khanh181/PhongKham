@@ -22,10 +22,10 @@ namespace PhongKham.Common
             var isDeveloper = bool.Parse(DBPhongKhamConfiguration.GetConfiguration().GetSection("AppSettings:IsDeveloper").Value);
             var isMemCached = bool.Parse(DBPhongKhamConfiguration.GetConfiguration().GetSection("AppSettings:IsMemCache").Value);
 
-            var key = $"mb-pasgo-developer.{sqlprocedureName}.{string.Join("_", param)}";
+            var key = $"phongkham-developer.{sqlprocedureName}.{string.Join("_", param)}";
             if (!isDeveloper)
             {
-                key = $"mb-pasgo-release.{sqlprocedureName}.{string.Join("_", param)}";
+                key = $"phongkham-release.{sqlprocedureName}.{string.Join("_", param)}";
             }
             key = key.Replace(" ", string.Empty).Replace("-", string.Empty).Replace(":", string.Empty);
 
@@ -55,10 +55,10 @@ namespace PhongKham.Common
             var isDeveloper = Boolean.Parse(DBPhongKhamConfiguration.GetConfiguration().GetSection("AppSettings:IsDeveloper").Value);
             var isMemCached = Boolean.Parse(DBPhongKhamConfiguration.GetConfiguration().GetSection("AppSettings:IsMemCache").Value);
 
-            var key = $"mb-pasgo-developer.{apiName}.{string.Join("_", param)}";
+            var key = $"phongkham-developer.{apiName}.{string.Join("_", param)}";
             if (!isDeveloper)
             {
-                key = $"mb-pasgo-release.{apiName}.{string.Join("_", param)}";
+                key = $"phongkham-release.{apiName}.{string.Join("_", param)}";
             }
             key = key.Replace(" ", string.Empty).Replace("-", string.Empty).Replace(":", string.Empty);
 
@@ -81,10 +81,10 @@ namespace PhongKham.Common
             var isDeveloper = Boolean.Parse(DBPhongKhamConfiguration.GetConfiguration().GetSection("AppSettings:IsDeveloper").Value);
             var isMemCached = Boolean.Parse(DBPhongKhamConfiguration.GetConfiguration().GetSection("AppSettings:IsMemCache").Value);
 
-            var key = $"mb-pasgo-developer.{apiName}.{string.Join("_", param)}";
+            var key = $"phongkham-developer.{apiName}.{string.Join("_", param)}";
             if (!isDeveloper)
             {
-                key = $"mb-pasgo-release.{apiName}.{string.Join("_", param)}";
+                key = $"phongkham-release.{apiName}.{string.Join("_", param)}";
             }
             key = key.Replace(" ", string.Empty).Replace("-", string.Empty).Replace(":", string.Empty);
 

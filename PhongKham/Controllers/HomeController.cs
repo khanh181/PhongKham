@@ -21,12 +21,22 @@ namespace PhongKham.Controllers
         /*[Route("/")]*/
         public IActionResult Index()
         {
-            using (var db = _db.Db)
+            var id = HttpContext.Session.GetString("Id");
+
+            // Kiểm tra xem có các giá trị của Session hay không
+            if (string.IsNullOrEmpty(id) )
             {
-                var listTinh = db.QueryCachedAsync<TinhModel>(Constants.PhongKham.Stored.GetTinhAll, commandType: CommandType.StoredProcedure).ToList();
-                return View(listTinh);
+                // Nếu bất kỳ giá trị nào trong Session thiếu, chuyển hướng đến trang đăng nhập
+                return Redirect("/dang-nhap");
+            }
+            else
+            {
+                // Nếu có đủ giá trị trong Session, hiển thị view bình thường
+                return View();
             }
         }
+
+
 
         public IActionResult Privacy()
         {

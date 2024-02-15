@@ -463,7 +463,14 @@
                       </ul>
                     </li> -->
                     <li class="menu-line">
-                        @Html.ActionLink("Đăng nhập", "Index", "Account")
+                        @if (Context.Session.GetString("Id") == null)
+                        {
+                            @Html.ActionLink("Đăng nhập", "Index", "Account")
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Đăng xuất", "Logout", "Account")
+                        }
                     </li>
                     <!-- <li class="menu-line">
                       <a href="index.html"
@@ -783,7 +790,7 @@
                         </ul>
                     </li>
                     <li class="menu-line">
-                        <a asp-asp-controller="Account" asp-action="Index" >Đăng nhập</a>
+                        <a href="/dang-nhap">Đăng nhập</a>
                     </li>
                 </ul>
             </div>
