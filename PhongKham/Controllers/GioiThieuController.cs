@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PhongKham.Models;
 using System.Diagnostics;
@@ -12,7 +13,7 @@ namespace PhongKham.Controllers
         {
             _logger = logger;
         }
-
+        /*[Authorize]*/
         public IActionResult Index()
         {
             return View();

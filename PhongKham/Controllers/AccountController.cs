@@ -11,6 +11,7 @@ using System.Security.Claims;
 using static PhongKham.Common.Constants.PhongKham;
 using System.Data;
 using PhongKham.Database;
+using Microsoft.Extensions.Configuration;
 
 namespace PhongKham.Controllers
 {
@@ -18,11 +19,13 @@ namespace PhongKham.Controllers
     {
         private readonly PKDbContext _db;
         private readonly ILogger<HomeController> _logger;
+        private readonly IConfiguration _configuration;
 
-        public AccountController(ILogger<HomeController> logger, PKDbContext pkDbContext)
+        public AccountController(ILogger<HomeController> logger, PKDbContext pkDbContext, IConfiguration configuration)
         {
             _logger = logger;
             _db = pkDbContext;
+            _configuration = configuration;
         }
 
         [Route("dang-ky/{*slug}")]
@@ -44,31 +47,40 @@ namespace PhongKham.Controllers
         public IActionResult Login(UserLogin model)
         {
             var identity = _db.Db.QueryCachedAsync<UserLogin>(Stored.NguoiDungGetIdentityBySdt, param: new { model.Sdt, model.PassWord }, commandType: CommandType.StoredProcedure).FirstOrDefault();
-            if (identity == null)
+            var userLogin = new UserLogin
             {
-                // Trả về một JsonResult với thông báo đăng nhập thất bại
-                return Json(new { success = false, message = "Đăng nhập thất bại." });
+                Id = identity.Id,
+                Sdt = identity.Sdt,
+                Ten = identity.Ten,
+                DiaChi = identity.DiaChi
+            };
+
+            if (userLogin.Ten == null)
+            {
+                TempData["Message"] = "Mật khẩu hoặc tên tài khoản không đúng.";
+                return Redirect("/dang-nhap");
             }
             else
             {
-              /*  var userLogin = new UserLogin
-                {
-                    Sdt = identity.Sdt,
-                    Id = identity.Id,
-                    Ten = identity.Ten,
-                    DiaChi = identity.DiaChi
-                };*/
-                HttpContext.Session.SetString("Sdt", identity.Sdt);
-                HttpContext.Session.SetString("Id", identity.Id.ToString());
-                HttpContext.Session.SetString("Ten", identity.Ten);
-                HttpContext.Session.SetString("DiaChi", identity.DiaChi);
+                // Tạo token JWT
+                var tokenService = new TokenService(_configuration);
+                var token = tokenService.GenerateJwtToken(userLogin);
+
+                // Lưu token vào cookie
+                Response.Cookies.Append("jwt", token, new CookieOptions { HttpOnly = true });
+
+                // Chuyển hướng đến trang chủ
                 return Redirect("/");
             }
         }
+
         public IActionResult Logout()
         {
-            HttpContext.Session.Clear();
-            return Redirect("/dang-nhap"); 
+            // Xóa cookie chứa token JWT
+            Response.Cookies.Delete("jwt");
+
+            // Chuyển hướng đến trang đăng nhập
+            return Redirect("/dang-nhap");
         }
 
     }
