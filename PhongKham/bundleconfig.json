@@ -31,10 +31,9 @@
   {
     "outputFileName": "wwwroot/css/common-bundle.min.css",
     "inputFiles": [
-      "wwwroot/css/bootstrap.css",
+      "wwwroot/css/lib/bootstrap.css",
       "wwwroot/css/file/style.css",
       "wwwroot/css/file/newstyle.css",
-
       "wwwroot/css/lib/sm-core-css.css",
       "wwwroot/css/lib/sm-blue.css"
 
@@ -83,7 +82,7 @@
     "inputFiles": [
       "wwwroot/js/lib/jquery-3.5.1.min.js",
       "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/bootstrap.js",
+      "wwwroot/js/lib/bootstrap.js",
       "wwwroot/js/lib/jquery.smartmenus.js",
       "wwwroot/js/lib/splide.min.js",
       "wwwroot/js/shared.js",
@@ -101,7 +100,7 @@
     "inputFiles": [
       "wwwroot/js/lib/jquery-3.5.1.min.js",
       "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/bootstrap.min.js",
+      "wwwroot/js/lib/bootstrap.min.js",
       "wwwroot/js/lib/jquery.smartmenus.js",
       "wwwroot/js/shared.js",
       "wwwroot/js/file/gioithieu.js"
@@ -119,7 +118,7 @@
     "inputFiles": [
       "wwwroot/js/lib/jquery-3.5.1.min.js",
       "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/bootstrap.min.js",
+      "wwwroot/js/lib/bootstrap.min.js",
       "wwwroot/js/lib/jquery.smartmenus.js",
       "wwwroot/js/shared.js",
       "wwwroot/js/file/account.js"
