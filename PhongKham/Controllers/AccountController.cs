@@ -44,40 +44,61 @@ namespace PhongKham.Controllers
         // POST: Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Login(UserLogin model)
+        public async Task<IActionResult> Login(UserLogin model)
         {
             var identity = _db.Db.QueryCachedAsync<UserLogin>(Stored.NguoiDungGetIdentityBySdt, param: new { model.Sdt, model.PassWord }, commandType: CommandType.StoredProcedure).FirstOrDefault();
             var userLogin = new UserLogin
             {
                 Id = identity.Id,
                 Sdt = identity.Sdt,
-                Ten = identity.Ten,
+                UserName = identity.UserName,
+                Role = identity.Role,
                 DiaChi = identity.DiaChi
             };
 
-            if (userLogin.Ten == null)
+            if (userLogin.UserName == null)
             {
                 TempData["Message"] = "Mật khẩu hoặc tên tài khoản không đúng.";
                 return Redirect("/dang-nhap");
             }
             else
             {
-                // Tạo token JWT
-                var tokenService = new TokenService(_configuration);
-                var token = tokenService.GenerateJwtToken(userLogin);
+                /*  // Tạo token JWT
+                  var tokenService = new TokenService(_configuration);
+                  var token = tokenService.GenerateJwtToken(userLogin);
 
-                // Lưu token vào cookie
-                Response.Cookies.Append("jwt", token, new CookieOptions { HttpOnly = true });
+                  // Lưu token vào cookie
+                  Response.Cookies.Append("jwt", token, new CookieOptions { HttpOnly = true });*/
+
+                var claims = new List<Claim>
+                {
+                    new Claim("Id", userLogin.Id.ToString()),
+                    new Claim("Sdt", userLogin.Sdt),
+                    new Claim(ClaimTypes.Name, userLogin.UserName),
+                    new Claim("DiaChi", userLogin.DiaChi),
+                    new Claim("Role", userLogin.Role),
+                };
+                var identy = new ClaimsIdentity(claims, "CookieLoginAuth");
+                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identy);
+
+                await HttpContext.SignInAsync("CookieLoginAuth", claimsPrincipal);
 
                 // Chuyển hướng đến trang chủ
                 return Redirect("/");
             }
         }
 
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
         public IActionResult Logout()
         {
             // Xóa cookie chứa token JWT
-            Response.Cookies.Delete("jwt");
+            /*Response.Cookies.Delete("jwt");*/
+
+            HttpContext.SignOutAsync("CookieLoginAuth");
 
             // Chuyển hướng đến trang đăng nhập
             return Redirect("/dang-nhap");

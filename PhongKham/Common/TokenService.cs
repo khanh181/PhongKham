@@ -22,13 +22,13 @@ namespace PhongKham.Common
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] {
-            new Claim(JwtRegisteredClaimNames.Sub, userLogin.Id.ToString()), // Thay đổi ở đây
+            new Claim(JwtRegisteredClaimNames.Sub, userLogin.Id.ToString()), 
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             new Claim("Sdt", userLogin.Sdt),
-            new Claim("Ten", userLogin.Ten),
+            new Claim("UserName", userLogin.UserName),
             new Claim("DiaChi", userLogin.DiaChi),
+            new Claim("TokenName", "authentication")
         };
-
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
                 audience: _configuration["Jwt:Issuer"],
@@ -36,6 +36,8 @@ namespace PhongKham.Common
                 expires: DateTime.Now.AddMinutes(1),
                 signingCredentials: credentials
             );
+
+            /*ClaimsPrincipal claimPrincipal = new ClaimsPrincipal(token);*/
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
@@ -49,7 +51,7 @@ namespace PhongKham.Common
             {
                 Id = int.Parse(jwtToken.Claims.First(claim => claim.Type == JwtRegisteredClaimNames.Sub).Value), // Thay đổi ở đây
                 Sdt = jwtToken.Claims.First(claim => claim.Type == "Sdt").Value,
-                Ten = jwtToken.Claims.First(claim => claim.Type == "Ten").Value,
+                UserName = jwtToken.Claims.First(claim => claim.Type == "UserName").Value,
                 DiaChi = jwtToken.Claims.First(claim => claim.Type == "DiaChi").Value
             };
 

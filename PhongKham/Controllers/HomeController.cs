@@ -25,11 +25,11 @@ namespace PhongKham.Controllers
             _configuration = configuration;
         }
 
-        /* [Authorize]*/
+        [Authorize]
         public IActionResult Index()
         {
             // Đọc token từ cookie
-            var token = Request.Cookies["jwt"];
+            /*var token = Request.Cookies["jwt"];
 
             // Kiểm tra xem có token trong cookie hay không
             if (string.IsNullOrEmpty(token))
@@ -55,7 +55,9 @@ namespace PhongKham.Controllers
                     // Nếu có thông tin người dùng trong token, hiển thị view bình thường
                     return View();
                 }
-            }
+            }*/
+            return View();
+          
         }
 
        

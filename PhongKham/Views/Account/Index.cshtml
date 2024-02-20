@@ -119,5 +119,14 @@
       </div>
     </div>
 <script src="~/js/account-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var message = '@Html.Raw(TempData["Message"])';
+            if (message.length > 0) {
+                alert(message);
+            }
+        });
+    </script>
+
 </section>
 

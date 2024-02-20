@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,8 +22,21 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
 builder.Services.AddTransient<PKDbContext, PKDbContext>();
 
+builder.Services.AddAuthentication("CookieLoginAuth").AddCookie("CookieLoginAuth", options =>
+{
+    options.Cookie.Name = "CookieLoginAuth";
+    options.LoginPath = "/dang-nhap";
+    options.LogoutPath = "/dang-ky";
+    options.ExpireTimeSpan = TimeSpan.FromSeconds(5);
+});
+
+builder.Services.AddAuthorization( options =>
+{
+    options.AddPolicy("AdminCanAccess", policy => policy.RequireClaim("Role", "Admin"));
+});
+
 // Configure JWT authentication
-builder.Services.AddAuthentication(options =>
+/*builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -42,15 +56,15 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
     };
 });
-
+*/
 // Add services to the container.
-builder.Services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
+/*builder.Services.AddDistributedMemoryCache(); // Adds a default in-memory implementation of IDistributedCache
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(1); // You can set Time here 
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
-});
+});*/
 
 var app = builder.Build();
 
@@ -87,7 +101,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 // Ensure the app uses session state.
-app.UseSession();
+//app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

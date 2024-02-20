@@ -463,15 +463,18 @@
                       </ul>
                     </li> -->
                     <li class="menu-line">
-                        @if (Context.Session.GetString("Id") == null)
-                        {
-                            @Html.ActionLink("Đăng nhập", "Index", "Account")
-                        }
-                        else
-                        {
-                            @Html.ActionLink("Đăng xuất", "Logout", "Account")
+                        @{
+                            if (User == null || User.Identity == null || User.Identity.IsAuthenticated)
+                            {
+                                <a href="@Url.Action("Logout", "Account")">@User.Identity.Name</a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("Index", "Account")">Đăng nhập</a>
+                            }
                         }
                     </li>
+
                     <!-- <li class="menu-line">
                       <a href="index.html"
                         ><img

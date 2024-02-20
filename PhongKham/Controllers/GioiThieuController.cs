@@ -13,7 +13,7 @@ namespace PhongKham.Controllers
         {
             _logger = logger;
         }
-        /*[Authorize]*/
+        [Authorize(Policy = "AdminCanAccess")]
         public IActionResult Index()
         {
             return View();
