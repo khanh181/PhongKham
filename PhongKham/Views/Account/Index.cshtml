@@ -1,103 +1,122 @@
 ﻿<section style="margin-top:25px">
-    <div id="center" class="center w-clear margin2s container-fluid">
-        <div class="row">
-            <aside class="g_quarter col-lg-3 col-md-2 d-none d-md-block">
-                <div class="sidebar-left">
-                    <ul class="sidebar-menu"></ul>
-                </div>
-            </aside>
-
-            <div class="col-md-7 col-lg-6 col-xs-12 col-12 col-xl-5 ldangnhap content_area g_left_pad news-content">
-                <div class="main-tit"><h2>Đăng nhập</h2></div>
-                <div class="frm-tit">
-                    <form name="dangnhap"
-                          action="#"
-                          method="post"
-                          class="form-horizontal"
-                          onsubmit="$('#btn-dangnhap').val('Vui lòng đợi...')">
-                          @Html.AntiForgeryToken()
-                        <div class="form-group">
-                            <label class="field-name">Tên tài khoản <span class="req">*</span></label>
-                            <input class="form-control"
-                                   type="text"
-                                   placeholder="Nhập tài khoản"
-                                   name="username"
-                                   required="" />
-                        </div>
-                        <div class="form-group">
-                            <label class="field-name">Mật khẩu <span class="req">*</span></label>
-                            <input class="form-control"
-                                   type="password"
-                                   placeholder="Nhập mật khẩu"
-                                   name="password"
-                                   required="" />
-                        </div>
-                        <div class="form-group form-footer">
-                            <p>
-                                Bạn chưa có tài khoản?
-                                <a href="dang-ki.html" title="Bạn chưa có tài khoản?">Click vào đây!</a>
-                            </p>
-                            <input class="btn btn-default"
-                                   id="btn-dangnhap"
-                                   type="submit"
-                                   value="Đăng nhập" />
-                            <span class="qmk">
-                                <a data-bs-toggle="modal" data-bs-target="#ModalFP">Quên mật khẩu?</a>
-                            </span>
-                        </div>
-                        <input type="hidden" name="dangnhap" />
-                    </form>
-                </div>
+<div id="center" class="center w-clear margin2s">
+    <div class="hidden-xs hidden-sm">
+        <aside class="g_quarter col-md-3 col-lg-3 col-xs-12 col-sm-12">
+            <div class="sidebar-left">
+                <ul class="sidebar-menu"></ul>
             </div>
+        </aside>
+    </div>
+    <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12 ldangnhap content_area g_left_pad news-content">
+        <div class="main-tit"><h2>Đăng nhập</h2></div>
+        <div class="frm-tit">
+            <form name="dangnhap"
+                  action="/Account/Login"
+                  method="Post"
+                  class="form-horizontal"
+                  onsubmit="$('#btn-dangnhap').val('Vui lòng đợi...')">
+                    @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <label class="field-name">Tên tài khoản <span class="req">*</span></label>
+                    <input class="form-control"
+                           type="text"
+                           placeholder="Nhập số điện thoại"
+                           name="Sdt"
+                           required="" />
+                </div>
+                <div class="form-group">
+                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
+                    <input class="form-control"
+                           type="password"
+                           placeholder="Nhập mật khẩu"
+                           name="PassWord"
+                           required="" />
+                </div>
+                <div class="form-group form-footer">
+                    <p>
+                        Bạn chưa có tài khoản?
+                        <a href="/dang-ky/3" >Click vào đây!</a>
+                    </p>
+                    <input class="btn btn-default"
+                           id="btn-dangnhap"
+                           type="submit"
+                           value="Đăng nhập" />
+                    <span class="qmk">
+                            <a data-toggle="modal" data-target="#ModalFP">Quên mật khẩu?</a>
+                    </span>
+                </div>
+                <input type="hidden" name="dangnhap" />
+            </form>
         </div>
     </div>
-    <div class="modal fade"
-         id="ModalFP"
-         tabindex="-1"
-         role="dialog"
-         aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        <b>Quên mật khẩu</b>
-                    </h1>
-                    <button type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="FPForm">
-                        <div class="form-group">
-                            <label class="field-name">Nhập Email <span class="req">*</span></label>
-                            <input class="form-control"
-                                   type="email"
-                                   placeholder="Nhập Email"
-                                   name="email"
-                                   required="" />
-                        </div>
-                        <input id="FPForm-submit"
-                               class="btn btn-success"
-                               type="submit"
-                               value="Gửi" />
-                    </form>
-                    <form id="OTPForm">
-                        <div class="form-group">
-                            <label class="field-name">Nhập OTP <span class="req">*</span></label>&nbsp;
-                            <input class="form-control"
-                                   type="text"
-                                   placeholder="Nhập OTP"
-                                   name="OTP"
-                                   required="" />
-                            &nbsp;
-                            <input class="btn btn-success" type="submit" value="Gửi" />
-                        </div>
-                        <div><a>Gửi lại mã OTP</a></div>
-                    </form>
-                </div>
+    <div class="hidden-md hidden-lg">
+        <aside class="g_quarter col-md-3 col-lg-3 col-xs-12 col-sm-12">
+            <div class="sidebar-left">
+                <ul class="sidebar-menu"></ul>
             </div>
+        </aside>
+    </div>
+</div>
+<div
+      class="modal fade"
+      id="ModalFP"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title"><b>Quên mật khẩu</b></h4>
+          </div>
+          <div class="modal-body">
+            <form id="FPForm">
+              <div class="form-group">
+                <label class="field-name"
+                  >Nhập Email <span class="req">*</span></label
+                >
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Nhập Email"
+                  name="email"
+                  required=""
+                />
+              </div>
+              <input
+                id="FPForm-submit"
+                class="btn btn-default"
+                type="submit"
+                value="Gửi"
+              />
+            </form>
+            <form id="OTPForm">
+              <div class="form-group">
+                <label class="field-name"
+                  >Nhập OTP <span class="req">*</span></label
+                >
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Nhập OTP"
+                  name="OTP"
+                  required=""
+                />
+                <input class="btn btn-default" type="submit" value="Gửi" />
+              </div>
+              <div><a>Gửi lại mã OTP</a></div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 <script src="~/js/account-bundle.min.js"></script>
     <script>
