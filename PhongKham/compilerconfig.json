@@ -14,5 +14,9 @@
   {
     "outputFile": "wwwroot/js/shared.es5.js",
     "inputFile": "wwwroot/js/shared.js"
+  },
+  {
+    "outputFile": "wwwroot/js/lib/jquery.smartmenus.es5.js",
+    "inputFile": "wwwroot/js/lib/jquery.smartmenus.js"
   }
 ]
