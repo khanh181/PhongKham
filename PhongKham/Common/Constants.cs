@@ -10,6 +10,8 @@
 
                 // Phần tài khoản
                 public const string NguoiDungGetIdentityBySdt = @"[PhongKham_NguoiDungGetIdentityBySdt]";
+
+                public const string NguoiDungDangKyTaiKhoan= @"[PhongKham_DangKyNguoiDung]";
             }
         }
         public static string PROVINCE_ID_COOKIES = "PROVINCE_ID_COOKIES";

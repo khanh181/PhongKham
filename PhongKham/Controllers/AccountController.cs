@@ -40,6 +40,15 @@ namespace PhongKham.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Register(UserLogin model)
+        {
+            var register = _db.Db.QueryCachedAsync<UserLogin>(Stored.NguoiDungDangKyTaiKhoan, param: new { model.Sdt, model.PassWord }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+
+            // Chuyển hướng đến trang đăng nhập
+            return Redirect("/dang-nhap");
+        }
         // POST: Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]

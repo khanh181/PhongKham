@@ -10,7 +10,7 @@
     <div class="col-md-5 col-lg-5 col-xs-12 col-sm-12 ldangnhap content_area g_left_pad news-content">
         <div class="main-tit"><h2>Đăng kí</h2></div>
         <div class="frm-tit">
-            <form name="dangnhap"
+            <form name="dangky"
                   action="#"
                   method="post"
                   class="form-horizontal"
@@ -18,43 +18,47 @@
                 <div class="form-group">
                     <label class="field-name">Tên tài khoản <span class="req">*</span></label>
                     <input class="form-control"
+                           type="number"
+                           placeholder="Nhập số điện thoại"
+                           name="Sdt"
+                           required="" />
+                </div>
+                 <div class="form-group">
+                    <label class="field-name">Tên người dùng<span class="req">*</span></label>
+                    <input class="form-control"
                            type="text"
-                           placeholder="Nhập tài khoản"
-                           name="username"
+                           placeholder="Nhập tên người dùng"
+                               name="UserName"
                            required="" />
                 </div>
+                    <div class="form-group">
+                        <label class="field-name">Địa chỉ<span class="req">*</span></label>
+                        <input class="form-control"
+                               type="text"
+                               placeholder="Nhập địa chỉ"
+                               name="DiaChi"
+                               required="" />
+                    </div>
                 <div class="form-group">
                     <label class="field-name">Mật khẩu <span class="req">*</span></label>
                     <input class="form-control"
-                           type="password"
-                           placeholder="Nhập mật khẩu"
-                           name="password"
-                           required="" />
+                            type="password"
+                            placeholder="Nhập mật khẩu"
+                            id="password"
+                            name="PassWord"
+                            required="" />
                 </div>
-                <div class="form-group">
-                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
+
+                @* <div class="form-group">
+                    <label class="field-name">Nhập lại mật khẩu <span class="req">*</span></label>
                     <input class="form-control"
-                           type="password"
-                           placeholder="Nhập mật khẩu"
-                           name="password"
-                           required="" />
-                </div>
-                <div class="form-group">
-                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
-                    <input class="form-control"
-                           type="password"
-                           placeholder="Nhập mật khẩu"
-                           name="password"
-                           required="" />
-                </div>
-                <div class="form-group">
-                    <label class="field-name">Mật khẩu <span class="req">*</span></label>
-                    <input class="form-control"
-                           type="password"
-                           placeholder="Nhập mật khẩu"
-                           name="password"
-                           required="" />
-                </div>
+                            type="password"
+                            placeholder="Nhập lại mật khẩu"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            required="" />
+                </div> *@
+               
                 <div class="form-group form-footer">
                     <p>
                         Bạn đã có tài khoản?
