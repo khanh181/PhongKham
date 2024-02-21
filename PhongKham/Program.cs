@@ -27,7 +27,7 @@ builder.Services.AddAuthentication("CookieLoginAuth").AddCookie("CookieLoginAuth
     options.Cookie.Name = "CookieLoginAuth";
     options.LoginPath = "/dang-nhap";
     options.LogoutPath = "/dang-ky";
-    options.ExpireTimeSpan = TimeSpan.FromSeconds(5);
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 });
 
 builder.Services.AddAuthorization( options =>

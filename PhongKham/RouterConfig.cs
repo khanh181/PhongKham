@@ -5,7 +5,7 @@
         public static void MapRoutes(WebApplication app)
         {
             MapDefaultRoute(app);
-            /*MapDangKyRoute(app);*/
+            MapDangKyRoute(app);
             /* MapDefaultRoute(app);*/
             UseCustomStatusCodePages(app);
         }

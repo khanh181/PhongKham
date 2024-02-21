@@ -29,7 +29,6 @@ namespace PhongKham.Controllers
         }
 
         [Route("dang-ky/{*slug}")]
-        [HttpPost]
         public IActionResult DangKy()
         {
             return View();

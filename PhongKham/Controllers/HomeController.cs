@@ -25,7 +25,7 @@ namespace PhongKham.Controllers
             _configuration = configuration;
         }
 
-        [Authorize]
+       /* [Authorize]*/
         public IActionResult Index()
         {
             // Đọc token từ cookie
@@ -56,6 +56,7 @@ namespace PhongKham.Controllers
                     return View();
                 }
             }*/
+            var diachi = User.FindFirstValue("DiaChi");
             return View();
           
         }

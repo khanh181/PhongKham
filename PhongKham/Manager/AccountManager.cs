@@ -90,19 +90,7 @@ namespace PhongKham.Manager
         }
 
         // Lấy thông tin người dùng đăng nhập thành công
-        public UserLogin GetIdentityBySdt(string sdt, string pass)
-        {
-            try
-            {
-                var nguoidung = _db.Db.QueryCachedAsync<UserLogin>(Stored.NguoiDungGetIdentityBySdt, param: new { sdt, pass }, commandType: CommandType.StoredProcedure).FirstOrDefault();
-                return nguoidung;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
-        }
-
+      
     }
 }
 
