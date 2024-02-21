@@ -1,9 +1,7 @@
 [
-  //css
   {
     "outputFileName": "wwwroot/css/lib.min.css",
     "inputFiles": [
-      "wwwroot/css/lib/bootstrap.min.css",
       "wwwroot/css/lib/fontawesome-all.min.css",
       "wwwroot/css/lib/jRating.jquery.css",
       "wwwroot/css/lib/sm-blue.css",
@@ -27,106 +25,57 @@
       "renameLocals": true
     }
   },
-  
   {
     "outputFileName": "wwwroot/css/common-bundle.min.css",
     "inputFiles": [
       "wwwroot/css/file/style.css",
       "wwwroot/css/file/newstyle.css",
-      "wwwroot/css/lib/bootstrap.min.css",
       "wwwroot/css/lib/sm-core-css.css",
       "wwwroot/css/lib/sm-blue.css"
-
-
     ],
     "minify": {
       "enabled": true,
       "renameLocals": true
     }
   },
-  // js
-  {
-    "outputFileName": "wwwroot/js/lib.min.js",
-    "inputFiles": [
-      "wwwroot/js/lib/jquery-3.5.1.min.js",
-      "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/lib/bootstrap.min.js",
-      "wwwroot/js/lib/fontawesome-all.min.js",
-      "wwwroot/js/lib/jquery.smartmenus.js",
-      "wwwroot/js/lib/jRating.jquery.js",
-      "wwwroot/js/lib/splide.min.js"
-    ],
-    "minify": {
-      "enabled": true,
-      "renameLocals": true
-    },
-    // Optionally generate .map file
-    "sourceMap": false
-  },
-  {
-    "outputFileName": "wwwroot/js/shared.min.js",
-    "inputFiles": [
-      "wwwroot/js/shared.js"
-    ],
-    "minify": {
-      "enabled": true,
-      "renameLocals": true
-    },
-    // Optionally generate .map file
-    "sourceMap": false
-  },
   {
     "outputFileName": "wwwroot/js/home-bundle.min.js",
     "inputFiles": [
       "wwwroot/js/lib/jquery-3.5.1.min.js",
-      "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/lib/bootstrap.min.js",
-      "wwwroot/js/lib/jquery.smartmenus.js",
       "wwwroot/js/lib/splide.min.js",
-      "wwwroot/js/shared.js",
       "wwwroot/js/file/home.js"
     ],
     "minify": {
       "enabled": true,
       "renameLocals": true
-    },
-    // Optionally generate .map file
-    "sourceMap": false
+    }
   },
   {
     "outputFileName": "wwwroot/js/gioithieu-bundle.min.js",
     "inputFiles": [
       "wwwroot/js/lib/jquery-3.5.1.min.js",
-      "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/lib/bootstrap.min.js",
-      "wwwroot/js/lib/jquery.smartmenus.js",
-      "wwwroot/js/shared.js",
       "wwwroot/js/file/gioithieu.js"
-
     ],
     "minify": {
       "enabled": true,
       "renameLocals": true
-    },
-    // Optionally generate .map file
-    "sourceMap": false
+    }
   },
   {
     "outputFileName": "wwwroot/js/account-bundle.min.js",
     "inputFiles": [
       "wwwroot/js/lib/jquery-3.5.1.min.js",
-      "wwwroot/js/lib/jquery-ui.min.js",
-      "wwwroot/js/lib/bootstrap.min.js",
-      "wwwroot/js/lib/jquery.smartmenus.js",
-      "wwwroot/js/shared.js",
       "wwwroot/js/file/account.js"
-
     ],
     "minify": {
       "enabled": true,
       "renameLocals": true
-    },
-    // Optionally generate .map file
-    "sourceMap": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/lib/jquery.smartmenus.min.js",
+    "inputFiles": [
+      "wwwroot/js/lib/jquery.smartmenus.js"
+    ]
   }
 ]
