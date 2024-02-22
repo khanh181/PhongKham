@@ -3,6 +3,12 @@
 $(document).ready(function () {
     $("#main-menu .menu-line").eq(5).addClass("activem");
     $("#main-menus .menu-line").eq(5).addClass("activem");
+    var message = "ha";
+    $(".toast-body-content").text(message);
+    if (message.length > 0) {
+        var toast = new bootstrap.Toast($(".toast"));
+        toast.show();
+    }
 });
 $("#FPForm").submit(function (e) {
     $("#OTPForm").show();

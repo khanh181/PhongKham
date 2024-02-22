@@ -346,6 +346,13 @@
   text-decoration: underline !important;
 }
 
+#notify {
+  bottom: 10%;
+}
+#notify .toast {
+  background: white;
+}
+
 #footer {
   background-color: #ebf0f5;
 }
