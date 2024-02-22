@@ -11,7 +11,7 @@
                 <div class="main-tit"><h2>Đăng nhập</h2></div>
                 <div class="frm-tit">
                     <form name="dangnhap"
-                          action="#"
+                          action="/Account/Login"
                           method="post"
                           class="form-horizontal"
                           onsubmit="$('#btn-dangnhap').val('Vui lòng đợi...')">
@@ -20,8 +20,8 @@
                             <label class="field-name">Tên tài khoản <span class="req">*</span></label>
                             <input class="form-control"
                                    type="text"
-                                   placeholder="Nhập tài khoản"
-                                   name="username"
+                                   placeholder="Nhập số điện thoại"
+                                   name="Sdt"
                                    required="" />
                         </div>
                         <div class="form-group">
@@ -29,20 +29,20 @@
                             <input class="form-control"
                                    type="password"
                                    placeholder="Nhập mật khẩu"
-                                   name="password"
+                                   name="PassWord"
                                    required="" />
                         </div>
                         <div class="form-group form-footer">
                             <p>
                                 Bạn chưa có tài khoản?
-                                <a href="dang-ki.html" title="Bạn chưa có tài khoản?">Click vào đây!</a>
+                                <a href="/dang-ky">Click vào đây!</a>
                             </p>
                             <input class="btn btn-default"
                                    id="btn-dangnhap"
                                    type="submit"
                                    value="Đăng nhập" />
                             <span class="qmk">
-                                <a data-bs-toggle="modal" data-bs-target="#ModalFP">Quên mật khẩu?</a>
+                                <a data-toggle="modal" data-target="#ModalFP">Quên mật khẩu?</a>
                             </span>
                         </div>
                         <input type="hidden" name="dangnhap" />
@@ -99,6 +99,8 @@
             </div>
         </div>
     </div>
-<script src="~/js/account-bundle.min.js"></script>
+    @section Scripts {     
+        <script src="~/js/account-bundle.min.js"></script>
+    }
 </section>
 
