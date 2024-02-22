@@ -12,6 +12,8 @@
                 public const string NguoiDungGetIdentityBySdt = @"[PhongKham_NguoiDungGetIdentityBySdt]";
 
                 public const string NguoiDungDangKyTaiKhoan= @"[PhongKham_DangKyNguoiDung]";
+                public const string NguoiDungLayBoiSdt= @"[PhongKham_LayNguoiDungBoiSdt]";
+                public const string SuaNguoiDung = @"[PhongKham_SuaNguoiDung]";
             }
         }
         public static string PROVINCE_ID_COOKIES = "PROVINCE_ID_COOKIES";

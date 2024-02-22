@@ -38,10 +38,36 @@
       "renameLocals": true
     }
   },
+  //date range css
+  {
+    "outputFileName": "wwwroot/css/daterange.min.css",
+    "inputFiles": [
+      "wwwroot/css/lib/daterangepicker.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+
+  // JS
+
+  //date range js
+  {
+    "outputFileName": "wwwroot/js/daterange.min.js",
+    "inputFiles": [
+      "wwwroot/js/lib/moment.min.js",
+      "wwwroot/js/lib/daterangepicker.js",
+      "wwwroot/js/lib/daterange-config.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
   {
     "outputFileName": "wwwroot/js/home-bundle.min.js",
     "inputFiles": [
-      "wwwroot/js/lib/jquery-3.5.1.min.js",
       "wwwroot/js/lib/splide.min.js",
       "wwwroot/js/file/home.js"
     ],
@@ -53,7 +79,6 @@
   {
     "outputFileName": "wwwroot/js/gioithieu-bundle.min.js",
     "inputFiles": [
-      "wwwroot/js/lib/jquery-3.5.1.min.js",
       "wwwroot/js/file/gioithieu.js"
     ],
     "minify": {
@@ -64,7 +89,6 @@
   {
     "outputFileName": "wwwroot/js/account-bundle.min.js",
     "inputFiles": [
-      "wwwroot/js/lib/jquery-3.5.1.min.js",
       "wwwroot/js/file/account.js"
     ],
     "minify": {

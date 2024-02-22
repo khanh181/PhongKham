@@ -1,4 +1,8 @@
-﻿<section style="margin-top:25px">
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/daterange.min.css" />
+}
+
+<section style="margin-top:25px">
 <div id="center" class="center w-clear margin2s">
     <div class="hidden-xs hidden-sm">
         <aside class="g_quarter col-md-3 col-lg-3 col-xs-12 col-sm-12">
@@ -11,10 +15,11 @@
         <div class="main-tit"><h2>Đăng kí</h2></div>
         <div class="frm-tit">
             <form name="dangky"
-                  action="#"
+                  action="/Account/Register"
                   method="post"
                   class="form-horizontal"
                   onsubmit="$('#btn-dangnhap').val('Vui lòng đợi...')">
+                  @Html.AntiForgeryToken()
                 <div class="form-group">
                     <label class="field-name">Tên tài khoản <span class="req">*</span></label>
                     <input class="form-control"
@@ -28,17 +33,25 @@
                     <input class="form-control"
                            type="text"
                            placeholder="Nhập tên người dùng"
-                               name="UserName"
+                           name="UserName"
                            required="" />
                 </div>
-                    <div class="form-group">
-                        <label class="field-name">Địa chỉ<span class="req">*</span></label>
-                        <input class="form-control"
-                               type="text"
-                               placeholder="Nhập địa chỉ"
-                               name="DiaChi"
-                               required="" />
-                    </div>
+                <div class="form-group">
+                    <label class="field-name">Ngày sinh<span class="req">*</span></label>
+                        <input class="form-control k-textbox date-range date-single-only-range"
+                            type="text"
+                            id="date-range-dk"
+                            name="NgaySinh"
+                            required="" />
+                </div>
+                <div class="form-group">
+                    <label class="field-name">Địa chỉ<span class="req">*</span></label>
+                    <input class="form-control"
+                            type="text"
+                            placeholder="Nhập địa chỉ"
+                            name="DiaChi"
+                            required="" />
+                </div>
                 <div class="form-group">
                     <label class="field-name">Mật khẩu <span class="req">*</span></label>
                     <input class="form-control"
@@ -82,5 +95,9 @@
         </aside>
     </div>
 </div>
-<script src="~/js/account-bundle.min.js"></script>
+
+@section Scripts {
+    <script src="~/js/account-bundle.min.js"></script>
+    <script src="~/js/daterange.min.js"></script>
+}
 </section>

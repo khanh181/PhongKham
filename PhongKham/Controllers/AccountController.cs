@@ -33,21 +33,29 @@ namespace PhongKham.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Register(UserLogin model)
+        {
+            var register = _db.Db.QueryCachedAsync<UserLogin>(Stored.NguoiDungDangKyTaiKhoan, param: new { model.Sdt, model.PassWord, model.DiaChi, model.NgaySinh, model.UserName }, commandType: CommandType.StoredProcedure).FirstOrDefault();
+            if (register == null)
+            {
+                TempData["Message"] = "Đăng ký tài khoản thất bại";
+                return Redirect("/dang-ky");
+            }
+            else
+            {
+                // Chuyển hướng đến trang đăng nhập
+                TempData["Message"] = "Đăng ký tài khoản thành công";
+                return Redirect("/dang-nhap");
+            }
+        }
         // *** Đăng nhập
         [Route("dang-nhap/{*slug}")]
         [ResponseCache(NoStore = true, Duration = 0, Location = ResponseCacheLocation.None)]
         public IActionResult Index()
         {
             return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Register(UserLogin model)
-        {
-            var register = _db.Db.QueryCachedAsync<UserLogin>(Stored.NguoiDungDangKyTaiKhoan, param: new { model.Sdt, model.PassWord }, commandType: CommandType.StoredProcedure).FirstOrDefault();
-
-            // Chuyển hướng đến trang đăng nhập
-            return Redirect("/dang-nhap");
         }
         // POST: Account/Login
         [HttpPost]
@@ -90,7 +98,7 @@ namespace PhongKham.Controllers
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identy);
 
                 await HttpContext.SignInAsync("CookieLoginAuth", claimsPrincipal);
-
+                TempData["Message"] = "Đăng nhập thành công";
                 // Chuyển hướng đến trang chủ
                 return Redirect("/");
             }
