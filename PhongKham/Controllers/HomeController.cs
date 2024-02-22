@@ -56,7 +56,12 @@ namespace PhongKham.Controllers
                     return View();
                 }
             }*/
+           
             var diachi = User.FindFirstValue("DiaChi");
+            if (diachi != null) 
+            {
+                TempData["Message"] = "Đăng nhập thành công";
+            }
             return View();
           
         }

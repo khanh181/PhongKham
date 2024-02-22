@@ -99,19 +99,27 @@
             </div>
         </div>
     </div>
-    <div id="notify" class="toast-container position-fixed end-0 p-3">
-        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <strong class="me-auto">Hệ thống</strong>
-                <small>11 mins ago</small>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
+    <div class="toast text-bg-success" style="position: absolute; top: 40px; right: 0; background-color: white;">
+        <div class="d-flex">
             <div class="toast-body">
-                <span class="toast-body-content"></span>
+                Hello, world! This is a toast message.
             </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
-<script src="~/js/account-bundle.min.js"></script>
-    
+
+    @section Scripts { 
+        <script src="~/js/account-bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                var message = "@Html.Raw(TempData["Message"])";
+                $(".toast-body").text(message);
+                if (message.length > 0) {
+                    const toast = new bootstrap.Toast($(".toast"));
+                    toast.show();
+                }
+            });
+        </script>
+    }
 </section>
 
