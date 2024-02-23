@@ -1,0 +1,694 @@
+﻿@using System.Security.Claims
+@* _Navigation.cshtml *@
+@{
+    var Role = User.FindFirstValue("Role");
+}
+
+<div id="menu">
+    <div class="menu-center">
+        <ul id="main-menu" class="sm sm-blue">
+            <li class="menu-line">
+                @* <a href="index.html">Trang chủ</a> *@
+                @Html.ActionLink("Trang chủ", "Index", "Home")
+            </li>
+            @if (Role == "Admin")
+            {
+                <li class="menu-line">
+                    @* <a href="gioi-thieu.html">Thương hiệu</a> *@
+                    @Html.ActionLink("Thương hiệu", "Index", "GioiThieu")
+                    <ul>
+                        <li>
+                            <a href="gioi-thieu/gioi-thieu-benh-vien-967/index.html">Giới thiệu bệnh viện</a>
+                            <ul>
+                                <li>
+                                    <a href="gioi-thieu/su-menh-tam-nhin-cam-ket-chien-luoc-631/index.html">
+                                        Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/su-menh-tam-nhin-cam-ket-chien-luoc-968/index.html">
+                                                Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/hinh-thanh-phat-trien-964/index.html">Hình thành - Phát triển</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/qua-trinh-hinh-thanh-va-phat-trien-969/index.html">Quá trình hình thành và phát triển</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/ban-giam-doc-qua-cac-thoi-ky-970/index.html">Ban Giám đốc qua các thời kỳ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/tong-quan-benh-vien-965/index.html">Tổng quan bệnh viện</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/so-do-to-chuc-971/index.html">Sơ đồ tổ chức</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/linh-vuc-kham-va-dieu-tri-972/index.html">Lĩnh vực khám và điều trị</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/thong-tin-lien-he-974/index.html">Thông tin liên hệ</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/thanh-tuu-noi-bat-966/index.html">Thành tựu nổi bật</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="gioi-thieu/co-cau-to-chuc-1006/index.html">Cơ cấu tổ chức</a>
+                            <ul>
+                                <li>
+                                    <a href="gioi-thieu/dang-uy-ban-giam-doc-1015/index.html">
+                                        Đảng ủy - Ban Giám đốc
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/khoi-hanh-chinh-van-phong-1016/index.html">Khối Hành chính văn phòng</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/phong-chi-dao-tuyen-1042/index.html">Phòng Chỉ đạo tuyến</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="gioi-thieu/gioi-thieu-phong-chi-dao-tuyen-1143/index.html">
+                                                        Giới thiệu phòng Chỉ đạo tuyến
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/huan-luyendao-tao-1142/index.html">Huấn luyện-đào tạo</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-cong-nghe-thong-tin-1043/index.html">Phòng Công nghệ thông tin</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-cong-tac-xa-hoi-1044/index.html">Phòng Công tác xã hội</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-dieu-duong-1045/index.html">Phòng Điều dưỡng</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-hanh-chinh-quan-tri-1046/index.html">Phòng Hành chính quản trị</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-ke-hoach-tong-hop-1047/index.html">Phòng Kế hoạch tổng hợp</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-quan-ly-chat-luong-1048/index.html">Phòng Quản lý chất lượng</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-tai-chinh-ke-toan-1049/index.html">Phòng Tài chính kế toán</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-to-chuc-can-bo-1050/index.html">Phòng Tổ chức cán bộ</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/phong-vat-tu-trang-thiet-bi-y-te-1051/index.html">Phòng Vật tư Trang thiết bị y tế</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/khoi-lam-sang-1018/index.html">Khối Lâm sàng</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-cap-cuu-hoi-suc-tich-cuc-chong-doc-1065/index.html">Khoa Cấp cứu - Hồi sức tích cực - Chống độc</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-dinh-duong-tiet-che-1066/index.html">Khoa Dinh dưỡng Tiết chế</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-hau-phau-1067/index.html">Khoa Hậu phẫu</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-hau-san-a-1068/index.html">Khoa Hậu sản A</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-hau-san-b-1069/index.html">Khoa Hậu sản B</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-hiem-muon-1062/index.html">Khoa Hiếm muộn</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-ke-hoach-hoa-gia-dinh-1061/index.html">Khoa Kế hoạch hóa gia đình</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-kham-benh-a-1059/index.html">Khoa Khám bệnh A</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-kham-benh-b-1060/index.html">Khoa Khám bệnh B</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-nhu-1063/index.html">Khoa Nhũ</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-phau-thuat-gay-me-hoi-suc-1070/index.html">Khoa Phẫu thuật - Gây mê hồi sức</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-phu-ngoai-ung-buou-1071/index.html">Khoa Phụ ngoại ung bướu</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-phu-noi-noi-tiet-1072/index.html">Khoa Phụ nội Nội tiết</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-san-benh-1073/index.html">Khoa Sản bệnh</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-sanh-1074/index.html">Khoa Sanh</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-so-sinh-1064/index.html">Khoa Sơ sinh</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/khoi-can-lam-sang-1019/index.html">Khối Cận lâm sàng</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-chan-doan-hinh-anh-1075/index.html">Khoa Chẩn đoán hình ảnh</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-di-truyen-y-hoc-1076/index.html">Khoa Di truyền Y học</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-duoc-1077/index.html">Khoa Dược</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-giai-phau-benh-te-bao-1078/index.html">Khoa Giải phẫu bệnh - Tế bào</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-kiem-soat-nhiem-khuan-1079/index.html">Khoa Kiểm soát nhiễm khuẩn</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/khoa-xet-nghiem-1080/index.html">Khoa Xét nghiệm</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/doan-the-1040/index.html">Đoàn thể</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/cong-doan-1081/index.html">Công đoàn</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="gioi-thieu/thong-bao-1110/index.html">Thông báo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/gioi-thieu-1111/index.html">Giới thiệu</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/hoat-dong-1112/index.html">Hoạt động</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/doan-thanh-nien-1083/index.html">Đoàn thanh niên</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="gioi-thieu/gioi-thieu-1113/index.html">Giới thiệu</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/tin-hoat-dong-1114/index.html">Tin hoạt động</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-chu-thap-do-1082/index.html">Hội chữ thập đỏ</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="gioi-thieu/tong-hop-hoat-dong-va-thi-dua-khen-thuong-theo-nam-1115/index.html">
+                                                        Tổng hợp hoạt động và thi đua khen thưởng theo
+                                                        năm
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/thu-chi-tai-chinh-1116/index.html">Thu chi tài chính</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/gioi-thieu-1117/index.html">Giới thiệu</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/thong-bao-1118/index.html">Thông báo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/hien-mau-nhan-dao-1119/index.html">Hiến máu nhân đạo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/tin-tuc-hoat-dong-1120/index.html">Tin tức hoạt động</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-cuu-chien-binh-1084/index.html">Hội cựu chiến binh</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="gioi-thieu/thong-bao-1121/index.html">Thông báo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/gioi-thieu-1122/index.html">Giới thiệu</a>
+                                                </li>
+                                                <li>
+                                                    <a href="gioi-thieu/hoat-dong-1123/index.html">Hoạt động</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/hoi-dong-tham-muu-1041/index.html">Hội đồng tham mưu</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-dong-thi-dua-khen-thuong-1085/index.html">Hội đồng Thi đua khen thưởng</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-dong-kiem-soat-nhiem-khuan-1086/index.html">Hội đồng Kiểm soát nhiễm khuẩn</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-dong-thuoc-va-dieu-tri-1087/index.html">Hội đồng Thuốc và Điều trị</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-dong-khoa-hoc-cong-nghe-1088/index.html">Hội đồng Khoa học Công nghệ</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-dong-dieu-duong-1089/index.html">Hội đồng Điều dưỡng</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/hoi-dong-luong-1090/index.html">Hội đồng Lương</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="gioi-thieu/chi-dao-tuyen-hoi-nghi-1092/index.html">Chỉ đạo tuyến - Hội nghị</a>
+                            <ul>
+                                <li>
+                                    <a href="gioi-thieu/huan-luyen-dao-tao-1095/index.html">Huấn luyện - Đào tạo</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/nhan-vien-benh-vien-1103/index.html">Nhân viên bệnh viện</a>
+                                        </li>
+                                        <li>
+                                            <a href="gioi-thieu/doi-tuong-khac-1104/index.html">Đối tượng khác</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/hoi-nghi-hoi-thao-khoa-hoc-1096/index.html">Hội nghị - Hội thảo khoa học</a>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/sinh-hoat-khoa-hoc-ky-thuat-1098/index.html">Sinh hoạt khoa học kỹ thuật</a>
+                                    <ul>
+                                        <li>
+                                            <a href="gioi-thieu/lich-to-chuc-sinh-hoat-khoa-hoc-ky-thuat-2023-1134/index.html">
+                                                Lịch tổ chức sinh hoạt khoa học kỹ thuật 2023
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="gioi-thieu/tuyen-dung-1093/index.html">Tuyển dụng</a>
+                        </li>
+                        <li>
+                            <a href="gioi-thieu/dau-thau-1145/index.html">Đấu thầu</a>
+                        </li>
+                        <li>
+                            <a href="gioi-thieu/su-kien-noi-bat-1094/index.html">Sự kiện nổi bật</a>
+                            <ul>
+                                <li>
+                                    <a href="gioi-thieu/su-kien-noi-vien-1105/index.html">Sự kiện nội viện</a>
+                                </li>
+                                <li>
+                                    <a href="gioi-thieu/su-kien-ngoai-vien-1106/index.html">Sự kiện ngoại viện</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--<li><a href="so-do">Sơ đồ khoa phòng</a></li>-->
+                    </ul>
+                </li>
+            };
+           
+            <li class="menu-line">
+                <a href="#">Dịch vụ khám</a>
+                <ul>
+                    <li>
+                        <a href="tin-tuc/tin-noi-bat-16/index.html">Tin nổi bật</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-line">
+                <a href="tin-tuc.html">Tin tức & kiến thức</a>
+            </li>
+            <li class="menu-line">
+                <a href="#">Đặt lịch khám</a>
+            </li>
+            <!-- <li class="menu-line">
+              <a href="gioi-thieu-chung/lien-he.html">Liên hệ</a>
+              <ul>
+                <li><a href="gioi-thieu-chung/lien-he.html">Liên hệ</a></li>
+              </ul>
+            </li> -->
+            <li class="menu-line">
+                @{
+                    if (User == null || User.Identity == null || User.Identity.IsAuthenticated)
+                    {
+                        <a href="@Url.Action("Logout", "Account")">@User.Identity.Name</a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Index", "Account")">Đăng nhập</a>
+                    }
+                }
+            </li>
+            <!-- <li class="menu-line">
+              <a href="index.html"
+                ><img
+                  src="img/vn.png"
+                  class="quick-link-image"
+                  alt="Tiếng Việt"
+                  width="25"
+                  height="25"
+              /></a>
+            </li>
+            <li class="menu-line">
+              <a href="index.html"
+                ><img
+                  src="img/en.png"
+                  class="quick-link-image"
+                  alt="Tiếng Anh"
+                  width="25"
+                  height="25"
+              /></a>
+            </li> -->
+            <!-- <li class="menu-line search1">
+
+              <a href="#"><i class="fa fa-search"></i></a>
+            </li> -->
+        </ul>
+    </div>
+</div>
+<div id="smenu">
+    <div class="smenu-wrapper">
+        <img src="~/assets/hinhanh/decaCare_5_anhlogo.png" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+        </svg>
+    </div>
+</div>
+<div id="menus">
+    <div class="smenu-menu">
+        <ul id="main-menus" class="sm sm-blue">
+            <li class="menu-line">
+                @* <a href="index.html">Trang chủ </a> *@
+                @Html.ActionLink("Trang chủ", "Index", "Home")
+            </li>
+            <li class="menu-line">
+                @* <a href="gioi-thieu.html">Thương hiệu</a> *@
+                @Html.ActionLink("Thương hiệu", "Index", "GioiThieu")
+                <ul>
+                    <li>
+                        <a href="gioi-thieu/gioi-thieu-benh-vien-967/index.html">Giới thiệu bệnh viện</a>
+                        <ul>
+                            <li>
+                                <a href="gioi-thieu/su-menh-tam-nhin-cam-ket-chien-luoc-631/index.html">
+                                    Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/su-menh-tam-nhin-cam-ket-chien-luoc-968/index.html">
+                                            Sứ mệnh - Tầm nhìn - Cam kết - Chiến lược
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/hinh-thanh-phat-trien-964/index.html">Hình thành - Phát triển</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/qua-trinh-hinh-thanh-va-phat-trien-969/index.html">Quá trình hình thành và phát triển</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/ban-giam-doc-qua-cac-thoi-ky-970/index.html">Ban Giám đốc qua các thời kỳ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/tong-quan-benh-vien-965/index.html">Tổng quan bệnh viện</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/so-do-to-chuc-971/index.html">Sơ đồ tổ chức</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/linh-vuc-kham-va-dieu-tri-972/index.html">Lĩnh vực khám và điều trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/thong-tin-lien-he-974/index.html">Thông tin liên hệ</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/thanh-tuu-noi-bat-966/index.html">Thành tựu nổi bật</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="gioi-thieu/co-cau-to-chuc-1006/index.html">Cơ cấu tổ chức</a>
+                        <ul>
+                            <li>
+                                <a href="gioi-thieu/dang-uy-ban-giam-doc-1015/index.html">
+                                    Đảng ủy - Ban Giám đốc
+                                </a>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/khoi-hanh-chinh-van-phong-1016/index.html">Khối Hành chính văn phòng</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/phong-chi-dao-tuyen-1042/index.html">Phòng Chỉ đạo tuyến</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-cong-nghe-thong-tin-1043/index.html">Phòng Công nghệ thông tin</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-cong-tac-xa-hoi-1044/index.html">Phòng Công tác xã hội</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-dieu-duong-1045/index.html">Phòng Điều dưỡng</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-hanh-chinh-quan-tri-1046/index.html">Phòng Hành chính quản trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-ke-hoach-tong-hop-1047/index.html">Phòng Kế hoạch tổng hợp</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-quan-ly-chat-luong-1048/index.html">Phòng Quản lý chất lượng</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-tai-chinh-ke-toan-1049/index.html">Phòng Tài chính kế toán</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-to-chuc-can-bo-1050/index.html">Phòng Tổ chức cán bộ</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/phong-vat-tu-trang-thiet-bi-y-te-1051/index.html">Phòng Vật tư Trang thiết bị y tế</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/khoi-lam-sang-1018/index.html">Khối Lâm sàng</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-cap-cuu-hoi-suc-tich-cuc-chong-doc-1065/index.html">Khoa Cấp cứu - Hồi sức tích cực - Chống độc</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-dinh-duong-tiet-che-1066/index.html">Khoa Dinh dưỡng Tiết chế</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-hau-phau-1067/index.html">Khoa Hậu phẫu</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-hau-san-a-1068/index.html">Khoa Hậu sản A</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-hau-san-b-1069/index.html">Khoa Hậu sản B</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-hiem-muon-1062/index.html">Khoa Hiếm muộn</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-ke-hoach-hoa-gia-dinh-1061/index.html">Khoa Kế hoạch hóa gia đình</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-kham-benh-a-1059/index.html">Khoa Khám bệnh A</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-kham-benh-b-1060/index.html">Khoa Khám bệnh B</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-nhu-1063/index.html">Khoa Nhũ</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-phau-thuat-gay-me-hoi-suc-1070/index.html">Khoa Phẫu thuật - Gây mê hồi sức</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-phu-ngoai-ung-buou-1071/index.html">Khoa Phụ ngoại ung bướu</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-phu-noi-noi-tiet-1072/index.html">Khoa Phụ nội Nội tiết</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-san-benh-1073/index.html">Khoa Sản bệnh</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-sanh-1074/index.html">Khoa Sanh</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-so-sinh-1064/index.html">Khoa Sơ sinh</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/khoi-can-lam-sang-1019/index.html">Khối Cận lâm sàng</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-chan-doan-hinh-anh-1075/index.html">Khoa Chẩn đoán hình ảnh</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-di-truyen-y-hoc-1076/index.html">Khoa Di truyền Y học</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-duoc-1077/index.html">Khoa Dược</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-giai-phau-benh-te-bao-1078/index.html">Khoa Giải phẫu bệnh - Tế bào</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-kiem-soat-nhiem-khuan-1079/index.html">Khoa Kiểm soát nhiễm khuẩn</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/khoa-xet-nghiem-1080/index.html">Khoa Xét nghiệm</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/doan-the-1040/index.html">Đoàn thể</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/cong-doan-1081/index.html">Công đoàn</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/doan-thanh-nien-1083/index.html">Đoàn thanh niên</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-chu-thap-do-1082/index.html">Hội chữ thập đỏ</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-cuu-chien-binh-1084/index.html">Hội cựu chiến binh</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/hoi-dong-tham-muu-1041/index.html">Hội đồng tham mưu</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-dong-thi-dua-khen-thuong-1085/index.html">Hội đồng Thi đua khen thưởng</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-dong-kiem-soat-nhiem-khuan-1086/index.html">Hội đồng Kiểm soát nhiễm khuẩn</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-dong-thuoc-va-dieu-tri-1087/index.html">Hội đồng Thuốc và Điều trị</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-dong-khoa-hoc-cong-nghe-1088/index.html">Hội đồng Khoa học Công nghệ</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-dong-dieu-duong-1089/index.html">Hội đồng Điều dưỡng</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/hoi-dong-luong-1090/index.html">Hội đồng Lương</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="gioi-thieu/chi-dao-tuyen-hoi-nghi-1092/index.html">Chỉ đạo tuyến - Hội nghị</a>
+                        <ul>
+                            <li>
+                                <a href="gioi-thieu/huan-luyen-dao-tao-1095/index.html">Huấn luyện - Đào tạo</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/nhan-vien-benh-vien-1103/index.html">Nhân viên bệnh viện</a>
+                                    </li>
+                                    <li>
+                                        <a href="gioi-thieu/doi-tuong-khac-1104/index.html">Đối tượng khác</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/hoi-nghi-hoi-thao-khoa-hoc-1096/index.html">Hội nghị - Hội thảo khoa học</a>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/sinh-hoat-khoa-hoc-ky-thuat-1098/index.html">Sinh hoạt khoa học kỹ thuật</a>
+                                <ul>
+                                    <li>
+                                        <a href="gioi-thieu/lich-to-chuc-sinh-hoat-khoa-hoc-ky-thuat-2023-1134/index.html">
+                                            Lịch tổ chức sinh hoạt khoa học kỹ thuật 2023
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="gioi-thieu/tuyen-dung-1093/index.html">Tuyển dụng</a>
+                    </li>
+                    <li>
+                        <a href="gioi-thieu/dau-thau-1145/index.html">Đấu thầu</a>
+                    </li>
+                    <li>
+                        <a href="gioi-thieu/su-kien-noi-bat-1094/index.html">Sự kiện nổi bật</a>
+                        <ul>
+                            <li>
+                                <a href="gioi-thieu/su-kien-noi-vien-1105/index.html">Sự kiện nội viện</a>
+                            </li>
+                            <li>
+                                <a href="gioi-thieu/su-kien-ngoai-vien-1106/index.html">Sự kiện ngoại viện</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-line">
+                <a href="#">Dịch vụ khám</a>
+                <ul>
+                    <li>
+                        <a href="tin-tuc/tin-noi-bat-16/index.html">Tin nổi bật</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-line">
+                <a href="tin-tuc.html">Tin tức & kiến thức</a>
+            </li>
+            <li class="menu-line">
+                <a href="#">Đặt lịch khám</a>
+                <ul>
+                    <li><a href="gioi-thieu-chung/lien-he.html">Liên hệ</a></li>
+                </ul>
+            </li>
+            <li class="menu-line">
+                <a href="/dang-nhap">Đăng nhập</a>
+            </li>
+        </ul>
+    </div>
+</div>
